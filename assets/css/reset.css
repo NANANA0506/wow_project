@@ -128,28 +128,28 @@ table {
   border-spacing: 0;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-  
+
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
-  
+
 .wholeWrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
-  
+
 .wholeWrapper .XX__left {
-    width: calc((100% - 1128px) / 2);
+  width: calc((100% - 1400px) / 2);
 }
-  
+
 .wholeWrapper .rsWrapper {
-    width: 1128px;
+  width: 1400px;
 }
-  
+
 .wholeWrapper .XX__right {
-    width: calc((100% - 1128px) / 2);
+  width: calc((100% - 1400px) / 2);
 }

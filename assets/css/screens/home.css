@@ -1,0 +1,17 @@
+.homebox {
+  width: 100%;
+  height: 4000px;
+  background-color: aquamarine;
+}
+
+.text {
+  font-size: 16px;
+  color: blue;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 20px;
+    color: black;
+  }
+}
