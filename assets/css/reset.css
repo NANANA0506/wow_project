@@ -143,13 +143,13 @@ a {
 }
 
 .wholeWrapper .XX__left {
-  width: calc((100% - 1400px) / 2);
+  width: calc((100% - 1580px) / 2);
 }
 
 .wholeWrapper .rsWrapper {
-  width: 1400px;
+  width: 1580px;
 }
 
 .wholeWrapper .XX__right {
-  width: calc((100% - 1400px) / 2);
+  width: calc((100% - 1580px) / 2);
 }
