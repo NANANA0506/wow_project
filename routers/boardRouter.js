@@ -22,11 +22,11 @@ const conn =mysql2.createConnection({
 
 const router = express.Router();
 
-router.get("/create", (req, res, next) => {
+router.get("/board/create", (req, res, next) => {
     res.render("board/create");
 });
 
-router.post("create", (req, res, next) => {
+router.post("/create", (req, res, next) => {
     const { title, content } = req.body;
 
     const createQuery =`
@@ -41,16 +41,17 @@ router.post("create", (req, res, next) => {
     )
     `;
     try {
-        conn.query(createQuery, (error, result) => {
+        conn.query(createQuery, (error, board) => {
             if(error){
                 return res.status(400).send("잘못된 요청 입니다. 다시 시도해주세요.");
             }
-        res.redirect(`/board/list/${result.insertId}`);
+
         });
         
     } catch (error) {
         console.error(error);
         return res.status(400).send("게시글 생성에 실페했습니다.");
+        res.redirect("/");
     }
 });
 
