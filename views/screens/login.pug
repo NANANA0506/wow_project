@@ -1,11 +1,25 @@
 extends ../layouts/base.pug
 
 block content
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.7.2/css/all.css")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@600&display=swap" rel="stylesheet">
     .loginbox
         .signinbox
-            .Idbox 
-            .Passbox
+            .titlebox 
+                p We Of Webtoon
+            .inputbox
+                
+
+                .Idbox 
+                    input(type="text" name="Id" placeholder=" 아이디") 
+                    input(type="text" name="Password" placeholder=" 비밀번호")
+
+            .btnbox
+                form(action="Signup" method="get")
+                    button 로그인 
     .signupbox
         p.Idtext 아이디 찾기 |  
-        p.Passtext 비밀번호 찾기 |
+        p.Passtext 비밀번호 찾기   |
         p.Signuptext 회원가입
