@@ -1,19 +1,19 @@
 {
-  "name": "project",
+  "name": "wow_project",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NANANA0506/wow_project.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/NANANA0506/wow_project/issues"
   },
-  "homepage": "https://github.com/NANANA0506/wow_project#readme",
-  "description": ""
+  "homepage": "https://github.com/NANANA0506/wow_project#readme"
 }
