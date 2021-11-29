@@ -4,11 +4,16 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NANANA0506/wow_project.git"
+=======
+    "start": "NODE_ENV=production nodemon --exec node app.js",
+    "dev": "NODE_ENV=develop nodemon --exec node app.js"
+>>>>>>> refs/remotes/origin/master
   },
   "author": "",
   "license": "ISC",
