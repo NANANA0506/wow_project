@@ -153,3 +153,9 @@ a {
 .wholeWrapper .XX__right {
   width: calc((100% - 1580px) / 2);
 }
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "PT Mono", monospace;
+}
