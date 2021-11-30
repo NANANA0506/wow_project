@@ -186,19 +186,19 @@
 }
 
 .homebox__col1__sec__b__a2__c2__box1 i {
-  font-size: 18px;
+  font-size: 20px;
 
   color: #3b5998;
 }
 
 .homebox__col1__sec__b__a2__c2__box2 i {
-  font-size: 18px;
+  font-size: 20px;
 
   color: #333;
 }
 
 .homebox__col1__sec__b__a2__c2__box3 i {
-  font-size: 18px;
+  font-size: 20px;
 
   color: #e44d48;
 }
@@ -214,7 +214,7 @@
 
   border-radius: 3px;
 
-  background-color: rgb(96, 209, 112);
+  background-color: rgb(66, 209, 85);
   border-bottom: 1px solid rgb(231, 231, 231);
 }
 
@@ -245,7 +245,7 @@
 
   border-radius: 3px;
 
-  background-color: rgb(102, 222, 115);
+  background-color: rgb(94, 214, 108);
   border-bottom: 1px solid rgb(231, 231, 231);
 }
 
@@ -476,7 +476,8 @@
 .homebox__col4 {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(315deg, #c7ebaa, 75%, #34b834);
+
+  background-color: rgb(252, 232, 168);
 }
 
 .homebox__col5 {
