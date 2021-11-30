@@ -99,8 +99,8 @@
 }
 
 .footer__col2__sec2__icon {
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
 
   display: flex;
   flex-direction: row;
@@ -109,10 +109,12 @@
 
   border-radius: 100%;
   border: 5px solid #000;
+
+  margin: 0px 8px;
 }
 
 .footer__col2__sec2__icon i {
-  font-size: 30px;
+  font-size: 25px;
   color: #fff;
 }
 
