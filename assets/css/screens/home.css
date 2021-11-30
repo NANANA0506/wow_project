@@ -136,6 +136,8 @@
   align-items: center;
   justify-content: center;
 
+  border-radius: 3px;
+
   background-color: rgb(243, 119, 119);
   border-bottom: 1px solid rgb(231, 231, 231);
   box-shadow: 0.3px 0.3px 0.3px rgb(212, 212, 212);
@@ -176,9 +178,20 @@
   align-items: center;
   justify-content: center;
 
-  background-color: rgb(134, 165, 127);
+  border-radius: 3px;
+
+  background-color: #2db400;
   border-bottom: 1px solid rgb(231, 231, 231);
-  box-shadow: 0.3px 0.3px 0.3px rgb(212, 212, 212);
+}
+
+.homebox__col1__sec__b__a2__c2__top1__logo4 {
+  width: 45px;
+  height: 45px;
+
+  image-rendering: url("img/homelogo4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .homebox__col1__sec__b__a2__c2__box1 {
@@ -277,7 +290,7 @@
 
 .homebox__col3 {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
 
   display: flex;
   flex-direction: column;
@@ -295,13 +308,31 @@
 .homebox__col3__sec1__b1 {
   width: 33.3333333333%;
   height: 100%;
-  background-color: salmon;
+}
+
+.homebox__col3__sec1__b1 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .homebox__col3__sec1__b2 {
   width: 33.3333333333%;
   height: 100%;
-  background-color: lawngreen;
+}
+
+.homebox__col3__sec1__b2 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow7.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .homebox__col3__sec1__b3 {
