@@ -1,6 +1,6 @@
 .homebox {
   width: 100%;
-  height: 520vh;
+  height: 530vh;
 
   display: flex;
   flex-direction: column;
@@ -66,15 +66,16 @@
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  padding: 0px 20px;
+  padding: 0px 25px;
   background: none;
 }
 
 .homebox__col1__sec__b__a2__c1__text {
   width: 10%;
+  height: 100%;
 
   display: flex;
   flex-direction: row;
@@ -97,7 +98,21 @@
 }
 
 .homebox__col1__sec__b__a2__c1__title p {
-  font-size: 30px;
+  font-size: 44px;
+  color: #444;
+}
+
+.homebox__col1__sec__b__a2__c1__signup {
+  width: 10%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.homebox__col1__sec__b__a2__c1__signup button {
+  font-size: 13px;
   color: #444;
 }
 
@@ -108,9 +123,88 @@
   background: none;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+}
+
+.homebox__col1__sec__b__a2__c2__top {
+  width: 68px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  background-color: rgb(243, 119, 119);
+  border-bottom: 1px solid rgb(231, 231, 231);
+  box-shadow: 0.3px 0.3px 0.3px rgb(212, 212, 212);
+}
+
+.homebox__col1__sec__b__a2__c2__box {
+  width: 68px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  box-shadow: 0.6px 0.6px 1px rgb(212, 212, 212);
+}
+
+.homebox__col1__sec__b__a2__c2__top p {
+  font-size: 12px;
+
+  color: #333;
+}
+
+.homebox__col1__sec__b__a2__c2__box p {
+  font-size: 12px;
+
+  color: #333;
+}
+
+.homebox__col1__sec__b__a2__c2__top1 {
+  width: 68px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(134, 165, 127);
+  border-bottom: 1px solid rgb(231, 231, 231);
+  box-shadow: 0.3px 0.3px 0.3px rgb(212, 212, 212);
+}
+
+.homebox__col1__sec__b__a2__c2__box1 {
+  width: 68px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  box-shadow: 0.6px 0.6px 1px rgb(212, 212, 212);
+}
+
+.homebox__col1__sec__b__a2__c2__top1 p {
+  font-size: 12px;
+
+  color: #333;
+}
+
+.homebox__col1__sec__b__a2__c2__box1 p {
+  font-size: 12px;
+
+  color: #333;
 }
 
 .homebox__col1__sec li:nth-child(1) {
@@ -169,12 +263,21 @@
 .homebox__col2 {
   width: 100%;
   height: 100vh;
-  background-color: gainsboro;
+}
+
+.homebox__col2 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .homebox__col3 {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
