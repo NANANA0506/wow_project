@@ -22,12 +22,12 @@ const conn =mysql2.createConnection({
 
 const router = express.Router();
 
-router.get("/board/create", (req, res, next) => {
-    res.render("board/create");
+router.get("/create", (req, res, next) => {
+    res.render("screens/board");  
 });
 
 router.post("/create", (req, res, next) => {
-    const { title, content } = req.body;
+    const { title, content, createdAt } = req.body;
 
     const createQuery =`
     INSERT INTO board (
