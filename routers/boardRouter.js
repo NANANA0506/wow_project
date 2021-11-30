@@ -45,7 +45,7 @@ router.post("/create", (req, res, next) => {
             if(error){
                 return res.status(400).send("잘못된 요청 입니다. 다시 시도해주세요.");
             }
-
+            res.redirect("/");
         });
         
     } catch (error) {
