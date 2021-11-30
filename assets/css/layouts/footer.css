@@ -99,11 +99,37 @@
 
   display: flex;
   flex-direction: column;
+}
+
+.footer__col2__sec3__text1 {
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.footer__col2__sec3 p {
+.footer__col2__sec3__text1 p {
+  width: 500px;
+  height: 25px;
+
+  font-size: 16px;
+  color: #999;
+}
+
+.footer__col2__sec3__text2 {
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__col2__sec3__text2 p {
   width: 500px;
   height: 25px;
 
