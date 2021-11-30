@@ -1,0 +1,9 @@
+extends ../layouts/base.pug
+
+block content 
+    form(action="/question", method="get")
+        each board in boards   
+            div #{board.title} 
+            div #{board.content}
+            div #{board.createdAt}
+            hr     

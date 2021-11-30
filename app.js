@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 const globalRouter = require("./routers/globalRouter");
 const boardRouter = require("./routers/boardRouter");
-const signRouter = require("./routers/signRuter");
 const path = require("path");
 
 const PORT = process.env.PORT;

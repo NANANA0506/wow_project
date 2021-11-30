@@ -1,6 +1,6 @@
 .homebox {
   width: 100%;
-  height: 530vh;
+  height: 540vh;
 
   display: flex;
   flex-direction: column;
@@ -127,7 +127,7 @@
   justify-content: center;
 }
 
-.homebox__col1__sec__b__a2__c2__top {
+.homebox__col1__sec__b__a2__c2__top1 {
   width: 68px;
   height: 50px;
 
@@ -138,12 +138,12 @@
 
   border-radius: 3px;
 
-  background-color: rgb(243, 119, 119);
+  background-color: #000;
   border-bottom: 1px solid rgb(231, 231, 231);
   box-shadow: 0.3px 0.3px 0.3px rgb(212, 212, 212);
 }
 
-.homebox__col1__sec__b__a2__c2__box {
+.homebox__col1__sec__b__a2__c2__box1 {
   width: 68px;
   height: 50px;
 
@@ -157,19 +157,53 @@
   box-shadow: 0.6px 0.6px 1px rgb(212, 212, 212);
 }
 
-.homebox__col1__sec__b__a2__c2__top p {
-  font-size: 12px;
+.homebox__col1__sec__b__a2__c2__box2 {
+  width: 68px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  box-shadow: 0.6px 0.6px 1px rgb(212, 212, 212);
+}
+
+.homebox__col1__sec__b__a2__c2__box3 {
+  width: 68px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  box-shadow: 0.6px 0.6px 1px rgb(212, 212, 212);
+}
+
+.homebox__col1__sec__b__a2__c2__box1 i {
+  font-size: 18px;
+
+  color: #3b5998;
+}
+
+.homebox__col1__sec__b__a2__c2__box2 i {
+  font-size: 18px;
 
   color: #333;
 }
 
-.homebox__col1__sec__b__a2__c2__box p {
-  font-size: 12px;
+.homebox__col1__sec__b__a2__c2__box3 i {
+  font-size: 18px;
 
-  color: #333;
+  color: #e44d48;
 }
 
-.homebox__col1__sec__b__a2__c2__top1 {
+.homebox__col1__sec__b__a2__c2__top2 {
   width: 68px;
   height: 50px;
 
@@ -180,10 +214,70 @@
 
   border-radius: 3px;
 
-  background-color: #2db400;
+  background-color: rgb(96, 209, 112);
   border-bottom: 1px solid rgb(231, 231, 231);
 }
 
+.homebox__col1__sec__b__a2__c2__top3 {
+  width: 68px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 3px;
+
+  background-color: rgb(248, 212, 71);
+  border-bottom: 1px solid rgb(231, 231, 231);
+  box-shadow: 0.3px 0.3px 0.3px rgb(212, 212, 212);
+}
+
+.homebox__col1__sec__b__a2__c2__top4 {
+  width: 68px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 3px;
+
+  background-color: rgb(102, 222, 115);
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.homebox__col1__sec__b__a2__c2__top1__logo1 {
+  width: 45px;
+  height: 45px;
+
+  image-rendering: url("img/homelogo1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.homebox__col1__sec__b__a2__c2__top1__logo2 {
+  width: 45px;
+  height: 45px;
+
+  image-rendering: url("img/homelogo2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.homebox__col1__sec__b__a2__c2__top1__logo3 {
+  width: 45px;
+  height: 45px;
+
+  image-rendering: url("img/homelogo3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .homebox__col1__sec__b__a2__c2__top1__logo4 {
   width: 45px;
   height: 45px;
@@ -305,7 +399,9 @@
   flex-direction: row;
 }
 
-.homebox__col3__sec1__b1 {
+.homebox__col3__sec1__b1,
+.homebox__col3__sec1__b2,
+.homebox__col3__sec1__b3 {
   width: 33.3333333333%;
   height: 100%;
 }
@@ -320,11 +416,6 @@
   background-position: center center;
 }
 
-.homebox__col3__sec1__b2 {
-  width: 33.3333333333%;
-  height: 100%;
-}
-
 .homebox__col3__sec1__b2 img {
   width: 100%;
   height: 100%;
@@ -335,10 +426,14 @@
   background-position: center center;
 }
 
-.homebox__col3__sec1__b3 {
-  width: 33.3333333333%;
+.homebox__col3__sec1__b3 img {
+  width: 100%;
   height: 100%;
-  background-color: khaki;
+
+  image-rendering: url("img/wow8.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .homebox__col3__sec2__b1 {
@@ -350,7 +445,16 @@
 .homebox__col3__sec2__b2 {
   width: 33.3333333333%;
   height: 100%;
-  background-color: olive;
+}
+
+.homebox__col3__sec2__b2 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow8.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .homebox__col3__sec2__b3 {
