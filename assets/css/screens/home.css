@@ -416,6 +416,15 @@
   background-position: center center;
 }
 
+.homebox__col3__sec1__b1 :hover,
+.homebox__col3__sec1__b2 :hover,
+.homebox__col3__sec1__b3 :hover,
+.homebox__col3__sec2__b1 :hover,
+.homebox__col3__sec2__b2 :hover,
+.homebox__col3__sec2__b3 :hover {
+  border: 1px solid #fff;
+}
+
 .homebox__col3__sec1__b2 img {
   width: 100%;
   height: 100%;
@@ -478,6 +487,8 @@
   height: 100vh;
 
   background-color: rgb(252, 232, 168);
+
+  margin-bottom: 10px;
 }
 
 .homebox__col5 {
