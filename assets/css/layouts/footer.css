@@ -85,7 +85,14 @@
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
   color: #fff;
+}
+
+.footer__col2__sec1__text :hover {
+  font-size: 18px;
+
+  color: rgb(231, 139, 139);
 }
 
 .footer__col2__sec2 {
