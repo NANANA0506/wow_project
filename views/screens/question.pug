@@ -3,7 +3,10 @@ extends ../layouts/base.pug
 block content 
     form(action="/question", method="get")
         each board in boards
-            div #{board.title} 
-            div #{board.content}
-            div #{board.createdAt}
+            a.bt(href="/board/create") 작성하기
+            hr
+            div
+                div #{board.title} 
+                div #{board.content}
+                div #{board.createdAt}
             hr     
