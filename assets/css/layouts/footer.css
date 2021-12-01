@@ -52,8 +52,21 @@
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
+
   font-size: 17px;
   color: #fff;
+}
+
+.footer__col1__sec2__text1:hover,
+.footer__col1__sec2__text2:hover,
+.footer__col1__sec2__text3:hover,
+.footer__col1__sec2__text4:hover {
+  font-size: 19px;
+
+  transition: 0.3s;
+
+  color: rgb(231, 139, 139);
 }
 
 .footer__col2 {
@@ -91,6 +104,7 @@
 
 .footer__col2__sec1__text :hover {
   font-size: 18px;
+  transition: 0.3s;
 
   color: rgb(231, 139, 139);
 }
