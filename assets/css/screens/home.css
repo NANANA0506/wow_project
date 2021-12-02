@@ -519,40 +519,74 @@
   flex-direction: row;
 }
 
-.homebox__col5__sec1__b1 {
-  width: 33.3333333333%;
-  height: 100%;
-  background-color: salmon;
-}
-
-.homebox__col5__sec1__b2 {
-  width: 33.3333333333%;
-  height: 100%;
-  background-color: lawngreen;
-}
-
-.homebox__col5__sec1__b3 {
-  width: 33.3333333333%;
-  height: 100%;
-  background-color: khaki;
-}
-
-.homebox__col5__sec2__b1 {
-  width: 33.3333333333%;
-  height: 100%;
-  background-color: wheat;
-}
-
-.homebox__col5__sec2__b2 {
-  width: 33.3333333333%;
-  height: 100%;
-  background-color: olive;
-}
-
+.homebox__col5__sec1__b1,
+.homebox__col5__sec1__b2,
+.homebox__col5__sec1__b3,
+.homebox__col5__sec2__b1,
+.homebox__col5__sec2__b2,
 .homebox__col5__sec2__b3 {
   width: 33.3333333333%;
   height: 100%;
-  background-color: tan;
+}
+
+.homebox__col5__sec1__b1 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow13.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.homebox__col5__sec1__b2 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow14.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.homebox__col5__sec1__b3 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow15.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.homebox__col5__sec2__b1 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow16.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.homebox__col5__sec2__b2 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow17.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.homebox__col5__sec2__b3 img {
+  width: 100%;
+  height: 100%;
+
+  image-rendering: url("img/wow18.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .text {
