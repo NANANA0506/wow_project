@@ -589,6 +589,15 @@
   background-position: center center;
 }
 
+.homebox__col5__sec1__b1 :hover,
+.homebox__col5__sec1__b2 :hover,
+.homebox__col5__sec1__b3 :hover,
+.homebox__col5__sec2__b1 :hover,
+.homebox__col5__sec2__b2 :hover,
+.homebox__col5__sec2__b3 :hover {
+  border: 2px solid #fff;
+}
+
 .text {
   font-size: 16px;
   color: blue;
