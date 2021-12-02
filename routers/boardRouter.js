@@ -17,8 +17,6 @@ router.get("/question", (req, res, next) => {
     try {
         db.query(selectQuery, (err, boards) => {
 
-            console.log(err);
-            console.log(boards);
             res.render("screens/question", {boards});
 
         });
@@ -59,5 +57,49 @@ router.post("/create", (req, res, next) => {
         
     }
 }); 
+
+router.post("/update/:updateId", (req, res, next) => {
+    const {title, content} = req.body;
+    const {updateId} = req.params;
+    try {
+        updateQuery = `
+        UPDATE board
+           SET title = ${title},
+               content = ${content}
+         WHERE id = ${id}
+    `;
+    conn.query(updateQuery, (error, result) => {
+        if(error){
+            return res.status(400).send("게시글을 수정중 에러 발생 !");
+        }
+    });
+    res.redirect("board/question");
+    } catch (error) {
+      console.error(error)
+      res.status(400).send("게시글을 수정할 수 없습니다.")
+    }
+});
+
+router.post("/delete", (req, res, next) => {
+
+    const{id } = req.body;
+
+    try {
+        const deleteQuery = `
+            DELETE FROM board
+             WHERE id = ${id}
+        `;
+        conn.query(deleteQuery, (error, result) => {
+            if(error){
+                return res.status(400).send("삭제 중 에러 발생!");
+            }
+            res.redirect("/board/question");
+        });
+    } catch (error) {
+        console.error(error)
+        return res.status(400).send("삭제에 실페했습니다.");
+    }
+});
+
 
 module.exports = router;
