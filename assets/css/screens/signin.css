@@ -87,12 +87,16 @@ input.siginbody__box__col1__sec2__submit {
   margin-top: 20px;
 
   width: 100px;
-  height: 30px;
+  height: 40px;
 
-  font-size: 14px;
+  font-size: 12px;
+
+  color: #fff;
+
+  background-color: #41434e;
 
   border: none;
-  border-radius: 14px;
+  border-radius: 18px;
 }
 
 input.siginbody__box__col1__sec2__submit:hover {
