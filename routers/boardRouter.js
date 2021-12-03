@@ -9,7 +9,8 @@ router.get("/question", (req, res, next) => {
                 title,
                 content,
                 createdAt
-          FROM  board
+          FROM  board 
+         ORDER  BY  content   ASC 
     `;
 
     try {
@@ -24,30 +25,30 @@ router.get("/question", (req, res, next) => {
         return res.redirect("/");
     };
 });
-router.get("/signup", (req, res, next) => {
-    res.render("screens/signup");
-})
 
-router.post("/signup", (req, res, next) => {
-    const { title, content } = req.body;
+router.get("/question", (req, res, next) => {
+    res.render("screens/question");
+});
 
+router.post("/question", (req, res, next) => {
     const createQuery =`
     INSERT INTO board (
         title,
         content,
         createdAt
     ) VALUES (
-      "${title}",
-      "${content}",
+      "${req.body.title}",
+      "${req.body.content}",
       now()
     )
     `;
+
     try {
         conn.query(createQuery, (error, result) => {
             if(error){
                 return res.status(400).send("잘못된 요청 입니다. 다시 시도해주세요.");
             }
-        res.redirect("/board/question");
+            res.redirect("screens/question");
         });
     } catch (error) {
         console.error(error);
@@ -71,7 +72,7 @@ router.post("/update/:updateId", (req, res, next) => {
             return res.status(400).send("게시글을 수정중 에러 발생 !");
         }
     });
-    res.redirect("board/question");
+    res.redirect("screens/question");
     } catch (error) {
       console.error(error)
       res.status(400).send("게시글을 수정할 수 없습니다.")

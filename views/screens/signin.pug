@@ -1,0 +1,19 @@
+extends ../layouts/base.pug
+
+block content
+    .siginbody
+        .siginbody__box
+            .siginbody__box__col1
+                .siginbody__box__col1__sec1
+                    .siginbody__box__col1__sec1__title
+                        p OF WE WEB TOON
+                .siginbody__box__col1__sec2
+                    form.signinForm(action="/signin", method="POST")
+                        input.siginForm__input(type="email" name="signinEmail" placeholder="email") 
+                        input.siginForm__input(type="password" name="signinPassword" placeholder="password") 
+                        input.siginForm__submit(type="submit" name="SIGN IN") 
+                .siginbody__box__col1__sec3
+            .siginbody__box__col2
+                img(src="img/signin.png")
+                
+                

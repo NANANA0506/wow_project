@@ -6,8 +6,8 @@ router.get("/", (req, res, next) => {
     res.render("screens/home");
 });
 
-router.get("/login" , (req,res,next)=>{
-    res.render("screens/login");
+router.get("/signin" , (req,res,next)=>{
+    res.render("screens/signin");
 });
 
 router.get("/help", (req, res, next) => {
