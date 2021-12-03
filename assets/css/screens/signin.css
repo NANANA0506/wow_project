@@ -135,12 +135,21 @@ input.siginbody__box__col1__sec2__submit:hover {
   flex-direction: row;
 }
 
-.siginbody__box__col1__sec3__login {
-  width: 50%;
+.siginbody__box__col1__sec3__login1 {
+  margin-top: 35px;
+  width: 60%;
   height: 50px;
 }
 
-.siginbody__box__col1__sec3__login p {
+.siginbody__box__col1__sec3__login2 {
+  margin-top: 35px;
+  width: 40%;
+  height: 50px;
+  padding: 0px 30px;
+}
+
+.siginbody__box__col1__sec3__login1 p,
+.siginbody__box__col1__sec3__login2 p {
   font-size: 12px;
   color: #41434e;
 }
