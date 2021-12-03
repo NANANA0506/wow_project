@@ -26,11 +26,11 @@ router.get("/question", (req, res, next) => {
         return res.redirect("/");
     };
 });
-router.get("/create", (req, res, next) => {
-    res.render("screens/create");
+router.get("/signup", (req, res, next) => {
+    res.render("screens/signup");
 })
 
-router.post("/create", (req, res, next) => {
+router.post("/signup", (req, res, next) => {
     const { title, content } = req.body;
 
     const createQuery =`
