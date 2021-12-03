@@ -1,7 +1,6 @@
 const express = require("express");
 const db = require("../db");
-const mysql2 = require("mysql2");
-const conn = require("../db");
+
 
 const router = express.Router();
 
