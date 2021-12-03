@@ -1,5 +1,77 @@
-.one {
-  width: 50%;
+.header {
+  width: 100%;
   height: 50px;
-  background-color: gray;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.header .header__p {
+  width: 5%;
+  height: 100%;
+  background-color: ivory;
+}
+
+.header .header__wow_project {
+  width: 90%;
+  height: 100%;
+  background-color: ivory;
+
+  font-size: 25px;
+}
+
+.header .header__jjj {
+  width: 5%;
+  height: 100%;
+  background-color: ivory;
+}
+
+.partcipants {
+  width: 100%;
+  height: 800px;
+  background-color: lightpink;
+}
+
+.middlefooter {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.middlefooter .middlefooter__views {
+  width: 100%;
+  height: 100%;
+  background-color: ivory;
+}
+
+.middlefooter .middlefooter__user {
+  width: 100%;
+  height: 100%;
+  background-color: ivory;
+}
+
+.middlefooter .middlefooter__likes {
+  width: 100%;
+  height: 100%;
+  background-color: ivory;
+}
+
+.middlefooter .middlefooter__chat {
+  width: 100%;
+  height: 100%;
+  background-color: ivory;
+}
+
+.middlefooter .middlefooter__chat1 {
+  width: 100%;
+  height: 100%;
+  background-color: ivory;
+}
+
+.middlefooter .middlefooter__chat2 {
+  width: 100%;
+  height: 100%;
+  background-color: ivory;
 }
