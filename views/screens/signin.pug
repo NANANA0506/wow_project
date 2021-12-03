@@ -9,9 +9,12 @@ block content
                         p WEOF WEBTOON
                 .siginbody__box__col1__sec2
                     form.siginbody__box__col1__sec2__Form(action="/signin", method="POST")
-                        input.siginbody__box__col1__sec2__input(type="email" name="signinemail" placeholder="Email...") 
-                        i.fas.fa-user
-                        input.siginbody__box__col1__sec2__input(type="password" name="signinpassword" placeholder="Password...") 
+                        .siginbody__box__col1__sec2__Form__box
+                            input.siginbody__box__col1__sec2__Form__box__input(type="email" name="signinemail" placeholder="Email...") 
+                            i.fas.fa-user
+                        .siginbody__box__col1__sec2__Form__box    
+                            input.siginbody__box__col1__sec2__Form__box__input(type="password" name="signinpassword" placeholder="Password...") 
+                            i.fas.fa-unlock-alt
                         input.siginbody__box__col1__sec2__submit(type="submit" value="LOGIN IN")
                 .siginbody__box__col1__sec3
             .siginbody__box__col2
