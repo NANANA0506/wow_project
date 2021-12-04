@@ -7,6 +7,10 @@ router.get("/", (req, res, next) => {
     res.render("screens/home");
 });
 
+router.get("/finished", (req,res,next) => {
+    res.render("screens/finished")
+})
+
 router.get("/signin" , (req,res,next)=>{
     res.render("screens/signin");
 });
