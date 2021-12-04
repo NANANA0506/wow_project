@@ -10,7 +10,12 @@ router.get("/question", (req, res, next) => {
                 title,
                 content,
                 createdAt
+<<<<<<< HEAD
+          FROM  boards
+         ORDER  BY  content   ASC 
+=======
           FROM  board 
+>>>>>>> refs/remotes/origin/master
     `;
 
     try {

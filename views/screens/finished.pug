@@ -2,4 +2,12 @@ extends ../layouts/base.pug
 
 
 block content
-    h1 sdfsdf
+    each webtoon in webtoons
+        section.finishedwhole
+            div.finishedBox_img
+            div.finishedBox_txt
+                div 웹툰 이름:---#{webtoon.title}
+                div 웹툰 점수:---#{webtoon.score}
+                div 웹툰 화:---#{webtoon.episode}
+                div 웹툰 여부:---#{webtoon.being}
+            
