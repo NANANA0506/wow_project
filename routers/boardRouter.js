@@ -10,7 +10,7 @@ router.get("/question", (req, res, next) => {
                 title,
                 content,
                 createdAt
-          FROM  board 
+          FROM  boards
          ORDER  BY  content   ASC 
     `;
 

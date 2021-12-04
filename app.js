@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const globalRouter = require("./routers/globalRouter");
 const boardRouter = require("./routers/boardRouter");
+const webtoonRouter = require("./routers/webtoonRouter")
 const path = require("path");
 
 const PORT = process.env.PORT;
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, "/assets")));
 
 app.use("/", globalRouter);
 app.use("/board", boardRouter);
+app.use("/webtoon", webtoonRouter)
 
 
 app.listen(PORT, () => {
