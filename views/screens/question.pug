@@ -10,14 +10,7 @@ block content
         each board in boards
             div.bd__ct
                 div
-                    div  TITLE: #{board.title} 
+                    div TITLE: #{board.title} 
                     div CONTENT: #{board.content}
                     div CREATEDAT: #{board.createdAt}
                     div ID: #{board.id}
-                div
-                    form(action=`/board/update/:${board.id}`, method="POST") 
-                        button 수정하기
-                    form(action="/board/delete", method="POST")
-                        input(type="hidden" name="id" value=board.id)
-                        input(type="submit" value="삭제하기")
-            hr     
