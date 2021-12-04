@@ -10,6 +10,10 @@ router.get("/signin" , (req,res,next)=>{
     res.render("screens/signin");
 });
 
+router.get("/signup", (req,res, next)=>{
+    res.render("screens/signup");
+});
+
 router.get("/help", (req, res, next) => {
     res.render("screens/help");
 });
@@ -29,5 +33,6 @@ router.get("/event", (req, res, next) => {
 router.get("/termsofuse", (req, res, next) => {
     res.render("screens/termsofuse");
 });
+
 
 module.exports = router;

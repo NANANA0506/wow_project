@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, "/assets")));
 
 app.use("/", globalRouter);
 app.use("/board", boardRouter);
-app.use("signup", signupRouter);
+app.use("/signup", signupRouter);
 
 
 
