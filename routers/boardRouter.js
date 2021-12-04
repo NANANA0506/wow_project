@@ -11,7 +11,6 @@ router.get("/question", (req, res, next) => {
                 content,
                 createdAt
           FROM  board 
-         ORDER  BY  content   ASC 
     `;
 
     try {
@@ -29,13 +28,14 @@ router.get("/question", (req, res, next) => {
         return res.redirect("/");
     };
 });
-
+router.get("/create", (req, res, next) => {
+    res.render("screens/questioncreate");
+})
 
 
 router.post("/create", (req, res, next) => {
+    const {title, content} = req.body;
 
-    console.log(req.body.title);
-    console.log(req.body.content);
 
     const createQuery =`
     INSERT INTO board (
@@ -53,7 +53,7 @@ router.post("/create", (req, res, next) => {
             if(error){
                 return res.status(400).send("잘못된 요청 입니다. 다시 시도해주세요.");
             }
-            res.redirect("/board/question");
+        res.redirect("/board/question");
         });
     } catch (error) {
         console.error(error);

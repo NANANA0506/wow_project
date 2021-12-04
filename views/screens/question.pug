@@ -1,16 +1,17 @@
 extends ../layouts/base.pug
 
-block content 
-    form(action="/board/question", method="get")
-            
-    form.bt(action="/board/create", method="POST") 
-        button 작성하기
-        br
-        br
-        each board in boards
+block content
+    form.bt(action="/board/create", method="get") 
+        input(type="submit" value="작성하기") 
+    
+    each board in boards
+        form(action="/board/question", method="get")
             div.bd__ct
                 div
                     div TITLE: #{board.title} 
                     div CONTENT: #{board.content}
                     div CREATEDAT: #{board.createdAt}
                     div ID: #{board.id}
+        br
+        hr
+        
