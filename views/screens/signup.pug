@@ -6,21 +6,23 @@ block content
         label(htmlFor="name") NAME
         input(type="name" name="name" id="name" placeholder="이름" requried) 
 
-        label(htmlFor="email") EMAIL 
-        input(type="email" name="email" id="email" requried) 
-
-        label(htmlFor="password") PASSWORD
-        input(type="password" name="password" id="password" placeholder="비밀번호" requried) 
-
         label(htmlFor="birth") BIRTH : 
-        input(type="text" name="birth" placeholder="YYYY/MM/DD" required)
+        input(type="text" name="birth" placeholder="생일" required)
 
         label(htmlFor="gender") GENDER
             select(name="gender" requried) 
                 option(value="남성") 남성
                 option(value="여성") 여성 
+
         label(htmlFor="phonenumber") PHONE NUMBER 
-        input(type="number" name="phone_number" placeholder="XXX-XXXX-XXXX" requried)
+        input(type="number" name="phone_number" placeholder="전화번호" requried)
+        label(htmlFor="email") EMAIL 
+        input(type="email" name="email" id="email" placeholder="이메일" requried) 
+
+        label(htmlFor="password") PASSWORD
+        input(type="password" name="password" id="password" placeholder="비밀번호" requried) 
+
+
 
         input(type="submit" value="signup") 
 

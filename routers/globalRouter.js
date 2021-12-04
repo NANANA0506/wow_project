@@ -46,7 +46,7 @@ router.post("/signup", (req, res, next) => {
             res.redirect("screens/signup");
         });
     } catch (error) {
-        console.error(error);
+        console.log(error);
         res.redirect("screens/signup");
     };
 });
