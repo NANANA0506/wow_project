@@ -123,8 +123,9 @@ input.siginbody__box__col1__sec2__submit {
 }
 
 input.siginbody__box__col1__sec2__submit:hover {
-  width: 30px;
-  height: 30px;
+  border: 2px solid #41434e;
+  background-color: #fff;
+  color: #41434e;
 }
 
 .siginbody__box__col1__sec3 {
@@ -159,7 +160,12 @@ input.siginbody__box__col1__sec2__submit:hover {
   height: 100%;
 }
 
-.siginbody__box__col2 img {
+.siginbody__box__col2__sec {
+  width: 100%;
+  height: 100%;
+}
+
+.siginbody__box__col2__sec img {
   width: 100%;
   height: 100%;
 
