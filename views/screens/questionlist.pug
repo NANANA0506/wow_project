@@ -6,12 +6,13 @@ block content
     
     each board in boards
         form(action="/board/question", method="get")
-            div.bd__ct
-                div
+        form(action="/board/detail", method="get")
+            button 자세히보기
                     div TITLE: #{board.title} 
                     div CONTENT: #{board.content}
                     div CREATEDAT: #{board.createdAt}
                     div ID: #{board.id}
+                
         br
         hr
         
