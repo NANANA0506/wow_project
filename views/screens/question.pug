@@ -3,8 +3,8 @@ extends ../layouts/base.pug
 block content 
     form(action="/board/question", method="get")
             
-        a.bt(href="/board/create") 
-            button 작성하기
+    form.bt(action="/board/create", method="POST") 
+        button 작성하기
         br
         br
         each board in boards
@@ -15,7 +15,7 @@ block content
                     div CREATEDAT: #{board.createdAt}
                     div ID: #{board.id}
                 div
-                    a(href=`/board/update/:${board.id}`) 
+                    form(action=`/board/update/:${board.id}`, method="POST") 
                         button 수정하기
                     form(action="/board/delete", method="POST")
                         input(type="hidden" name="id" value=board.id)

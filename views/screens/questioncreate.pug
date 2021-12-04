@@ -1,0 +1,11 @@
+extends ../layouts/base.pug
+
+block content
+    form(action="/board/create", method="post")
+        div
+            label(htmlFor="title") TITLE 
+            input(type="text" name="title" id="title" required)
+        div
+            label(htmlFor="content") CONTENT 
+            input(type="text" name="content" id="content" required)
+        input(type="submit" value="Write")
