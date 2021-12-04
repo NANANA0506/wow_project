@@ -1,0 +1,11 @@
+extends ../layouts/base.pug
+
+block content
+    from(action="/board/detail", method="get")
+        h1 #{boards.title}
+        h2 #{boards.content}
+        h3 #{boards.createAt}
+        h4 #{boards.id}
+
+        a(href=`/board/update/:${boards.id}`)
+            button 수정하기 

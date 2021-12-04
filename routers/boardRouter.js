@@ -10,12 +10,7 @@ router.get("/question", (req, res, next) => {
                 title,
                 content,
                 createdAt
-<<<<<<< HEAD
           FROM  boards
-         ORDER  BY  content   ASC 
-=======
-          FROM  board 
->>>>>>> refs/remotes/origin/master
     `;
 
     try {
@@ -24,8 +19,7 @@ router.get("/question", (req, res, next) => {
             console.log(err);
             console.log(boards);
 
-            res.render("screens/question", {boards});
-
+            res.render("screens/questionlist", {boards});
         });
     
     } catch (error) {
@@ -43,7 +37,7 @@ router.post("/create", (req, res, next) => {
 
 
     const createQuery =`
-    INSERT INTO board (
+    INSERT INTO boards (
         title,
         content,
         createdAt
@@ -67,6 +61,9 @@ router.post("/create", (req, res, next) => {
     }
 
 }); 
+router.get("update", (req, res, next) => {
+    res.render("screens/questionupdate");
+})
 
 router.post("/update/:updateId", (req, res, next) => {
     const {title, content} = req.body;
@@ -111,5 +108,8 @@ router.post("/delete", (req, res, next) => {
     }
 });
 
+router.get("detail", (req, res, next) => {
+    res.render("screens/questiondetail")
+})
 
 module.exports = router;
