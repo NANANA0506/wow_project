@@ -16,7 +16,7 @@ router.get("/finished", (req, res, next) => {
 
   try {
     db.query(webtoonsSelectQuery, (error, webtoons) => {
-      res.render("screens/webtoon/finished", { webtoons });
+      res.render("screens/finished", { webtoons });
     });
   } catch (error) {
     console.error(error);

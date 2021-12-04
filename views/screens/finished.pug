@@ -3,11 +3,16 @@ extends ../layouts/base.pug
 
 block content
     each webtoon in webtoons
-        section.finishedwhole
-            div.finishedBox_img
-            div.finishedBox_txt
-                div 웹툰 이름:---#{webtoon.title}
-                div 웹툰 점수:---#{webtoon.score}
-                div 웹툰 화:----#{webtoon.episode}
-                div 웹툰 여부:---#{webtoon.being}
+        section.wholeFinishedWebtoon
+            main.main
+                section.content
+                    div.webtoonBox
+                        div.webtoonBox__top
+                            div.poster
+                        div.webtoonBox__bottom
+                            article.mr__title 웹툰 이름:---#{webtoon.title}
+                            article.mr__score 웹툰 점수:---#{webtoon.score}
+                            article.mr__episode 웹툰 화:----#{webtoon.episode}
+                            article.mr__episode 웹툰 여부:---#{webtoon.being}
+\
             
