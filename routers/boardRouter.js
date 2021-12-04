@@ -1,5 +1,6 @@
 const express = require("express");
-const db = require("../db");    
+const db = require("../db");
+const conn = require("../db/index") 
 
 const router = express.Router();
 
@@ -16,6 +17,9 @@ router.get("/question", (req, res, next) => {
     try {
         db.query(selectQuery, (err, boards) => {
 
+            console.log(err);
+            console.log(boards);
+
             res.render("screens/question", {boards});
 
         });
@@ -26,11 +30,11 @@ router.get("/question", (req, res, next) => {
     };
 });
 
-router.get("/question", (req, res, next) => {
-    res.render("screens/question");
+router.post("/create", (req, res, next) => {
+    res.render("screens/questioncreate");
 });
 
-router.post("/question", (req, res, next) => {
+router.post("/create", (req, res, next) => {
     const createQuery =`
     INSERT INTO board (
         title,
@@ -42,7 +46,6 @@ router.post("/question", (req, res, next) => {
       now()
     )
     `;
-
     try {
         conn.query(createQuery, (error, result) => {
             if(error){
@@ -55,6 +58,7 @@ router.post("/question", (req, res, next) => {
         return res.status(400).send("게시글 생성에 실패했습니다.");
         
     }
+
 }); 
 
 router.post("/update/:updateId", (req, res, next) => {

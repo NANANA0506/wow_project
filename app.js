@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 const globalRouter = require("./routers/globalRouter");
 const boardRouter = require("./routers/boardRouter");
-const signupRouter = require("./routers/signupRouter");
 const path = require("path");
 
 const PORT = process.env.PORT;
@@ -18,8 +17,6 @@ app.use(express.static(path.join(__dirname, "/assets")));
 
 app.use("/", globalRouter);
 app.use("/board", boardRouter);
-app.use("/signup", signupRouter);
-
 
 
 app.listen(PORT, () => {
