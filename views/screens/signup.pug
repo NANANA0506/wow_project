@@ -2,7 +2,7 @@ extends ../layouts/base.pug
 
 block content
 
-    form(action="/signup", method="get")
+    form(action="/signup", method="post")
         label(htmlFor="name") NAME
         input(type="name" name="name" id="name" placeholder="이름" requried) 
 
@@ -12,12 +12,15 @@ block content
         label(htmlFor="password") PASSWORD
         input(type="password" name="password" id="password" placeholder="비밀번호" requried) 
 
+        label(htmlFor="birth") BIRTH : 
+        input(type="text" name="birth" placeholder="YYYY/MM/DD" required)
+
         label(htmlFor="gender") GENDER
             select(name="gender" requried) 
                 option(value="남성") 남성
                 option(value="여성") 여성 
         label(htmlFor="phonenumber") PHONE NUMBER 
-        input(type="number" name="phone num" placeholder="XXX-XXXX-XXXX" requried)
+        input(type="number" name="phone_number" placeholder="XXX-XXXX-XXXX" requried)
 
-        button sginup
+        input(type="submit" value="signup") 
 
