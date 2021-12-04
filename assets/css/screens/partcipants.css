@@ -1,4 +1,11 @@
-.header {
+.all {
+  border-top: thick double #d5648a;
+  border-right: thick double #d5648a;
+  border-bottom: thick double #d5648a;
+  border-left: thick double #d5648a;
+}
+
+.top {
   width: 100%;
   height: 50px;
 
@@ -6,71 +13,84 @@
   flex-direction: row;
 }
 
-.header .header__p {
+.top .top__p {
   width: 5%;
   height: 100%;
-  background-color: ivory;
+  background-color: #e3d7ea;
 }
 
-.header .header__p .icon {
-  width: 50px;
-  height: 50px;
+.top .top__p .icon {
+  width: 45px;
+  height: 45px;
 
   border-radius: 100%;
 
-  background-color: gray;
+  background-color: #a2a4dd;
 }
 
-.header .header__wow_project {
+.top .top__wow_project {
   width: 90%;
   height: 100%;
-  background-color: ivory;
+  background-color: #e3d7ea;
 
   font-size: 25px;
 }
 
-.header .header__jjj {
+.top .top__jjj {
   width: 5%;
   height: 100%;
-  background-color: ivory;
+  background-color: #e3d7ea;
 }
 
 .partcipants {
+  border-top: thick double #d5648a;
+  border-bottom: thick double #d5648a;
+}
+
+.partcipants1 {
   width: 100%;
   height: 400px;
 
   display: flex;
   flex-direction: row;
+
+  border-bottom: double #d5648a;
 }
 
-.partcipants .partcipants__good {
+.partcipants1 .partcipants1__good {
   width: 25%;
   height: 100%;
-  background-color: rgb(224, 227, 230);
+  background-color: #c8c1e4;
 
   font-size: 50px;
+
+  border-right: double #d5648a;
 }
 
-.partcipants .partcipants__d {
+.partcipants1 .partcipants1__d {
   width: 25%;
   height: 100%;
-  background-color: rgb(224, 227, 230);
+  background-color: #c8c1e4;
 
   font-size: 30px;
+
+  border-right: double #d5648a;
 }
 
-.partcipants .partcipants__m {
+.partcipants1 .partcipants1__m {
   width: 25%;
   height: 100%;
-  background-color: rgb(224, 227, 230);
+  background-color: #c8c1e4;
 
   font-size: 30px;
+
+  border-right: double #d5648a;
 }
 
-.partcipants .partcipants__j {
+.partcipants1 .partcipants1__j {
   width: 25%;
   height: 100%;
-  background-color: rgb(224, 227, 230);
+  background-color: #c8c1e4;
 
   font-size: 30px;
 }
@@ -81,36 +101,44 @@
 
   display: flex;
   flex-direction: row;
+
+  border-bottom: double #d5648a;
 }
 
 .partcipants2 .parctipants2__ggang {
   width: 25%;
   height: 100%;
-  background-color: rgb(224, 227, 230);
+  background-color: #a2a4dd;
 
   font-size: 30px;
+
+  border-right: double #d5648a;
 }
 
 .partcipants2 .partcipants2__g {
   width: 25%;
   height: 100%;
-  background-color: rgb(224, 227, 230);
+  background-color: #a2a4dd;
 
   font-size: 30px;
+
+  border-right: double #d5648a;
 }
 
 .partcipants2 .partcipants2__d {
   width: 25%;
   height: 100%;
-  background-color: rgb(224, 227, 230);
+  background-color: #a2a4dd;
 
   font-size: 30px;
+
+  border-right: double #d5648a;
 }
 
 .partcipants2 .partcipants2__o {
   width: 25%;
   height: 100%;
-  background-color: rgb(224, 227, 230);
+  background-color: #a2a4dd;
 
   font-size: 30px;
 }
@@ -126,35 +154,35 @@
 .middlefooter .middlefooter__views {
   width: 100%;
   height: 30px;
-  background-color: ivory;
+  background-color: #f3bdca;
 }
 
 .middlefooter .middlefooter__user {
   width: 100%;
   height: 30px;
-  background-color: ivory;
+  background-color: #f3bdca;
 }
 
 .middlefooter .middlefooter__likes {
   width: 100%;
   height: 30px;
-  background-color: ivory;
+  background-color: #f3bdca;
 }
 
 .middlefooter .middlefooter__chat {
   width: 100%;
   height: 30px;
-  background-color: ivory;
+  background-color: #f3bdca;
 }
 
 .middlefooter .middlefooter__chat1 {
   width: 100%;
   height: 30px;
-  background-color: ivory;
+  background-color: #f3bdca;
 }
 
 .middlefooter .middlefooter__chat2 {
   width: 100%;
   height: 30px;
-  background-color: ivory;
+  background-color: #f3bdca;
 }
