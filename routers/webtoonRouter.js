@@ -1,10 +1,14 @@
 const express = require("express");
 const db = require("../db");
-const conn = require("../db/index");
 
 const router = express.Router();
 
 router.get("/finished", (req, res, next) => {
+  console.log(req.body.id);
+  console.log(req.body.id);
+  console.log(req.body.id);
+  console.log(req.body.id);
+  console.log(req.body.id);
   const webtoonsSelectQuery = `
     SELECT    id,
               title,
@@ -15,7 +19,7 @@ router.get("/finished", (req, res, next) => {
   `;
 
   try {
-    db.query(webtoonsSelectQuery, (error, webtoons) => {
+    db.query(webtoonsSelectQuery, (err, webtoons) => {
       res.render("screens/finished", { webtoons });
     });
   } catch (error) {

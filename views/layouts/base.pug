@@ -12,12 +12,18 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nanum+Myeongjo&family=PT+Mono&display=swap" rel="stylesheet")
     body
         header.header 
-            .header__col1
-                a(href="/signin")  
-                    p signin  
-            .header__col2  
-                a(href="/")
-                    p home 
+            ul.menus
+                li.header__col2  
+                    a(href="/")
+                        p home 
+                if loggedIn 
+                    li.menus__item
+                        a(href="/logout") logout    
+                else    
+                    li.menus__item
+                        a(href="/signin") signin
+                    li.menus__item
+                        a(href="/signup") signup 
         section.wholeWrapper 
             section.XX__left 
             section.rsWrapper
