@@ -25,35 +25,50 @@ router.get("/signup", (req, res, next) => {
 });
 
 router.post("/signup", (req, res, next) => {
-  const signupQuery = `
-        INSERT INTO people (
-            name,
-            birth,
-            gender,
-            phone_number,
-            email,
-            password
-        ) VALUES (
-            "${req.body.name}",
-            "${req.body.birth}",
-            "${req.body.gender}",
-            ${req.body.phone_number},
-            "${req.body.email}",
-            "${req.body.password}"
-        )
-    `;
 
-  try {
-    db.query(signupQuery, (error, signups) => {
-      if (error) {
-        console.log(error);
-      }
-      res.redirect("screens/signup");
-    });
-  } catch (error) {
-    console.log(error);
-    res.redirect("screens/signup");
-  }
+    const userCheckQuery=`
+        SELECT email
+          FROM people
+         WHERE email="${req.body.email}"`;
+        
+    db.query(userCheckQuery,(error,result)=>{
+        if(error) {
+            console.log(error);
+            return res.status(403).send("다시 시도해주세요");
+        }else{
+            if(result.length > 0){
+                return res.status(403).send("이메일 이미 존재합니다.");
+            }else{
+                const signupQuery = `
+                    INSERT INTO people (
+                        name,
+                        birth,
+                        gender,
+                        phone_number,
+                        email,
+                        password
+                    )VALUES (
+                        "${req.body.name}",
+                        "${req.body.birth}",
+                        "${req.body.gender}",
+                        ${req.body.phone_number},
+                        "${req.body.email}",
+                        "${req.body.password}"
+                )`;
+
+                db.query(signupQuery,(error,resutl)=>{
+                    if(error){
+                        console.error(error);
+                        return res.status(400).send("회원가입 실패");
+                    }else{
+                        res.status(201).send("회원가입 성공")
+                    }
+                })
+            }
+        }
+    })
+
+
 });
 
 router.get("/help", (req, res, next) => {
