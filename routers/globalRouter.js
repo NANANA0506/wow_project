@@ -20,6 +20,28 @@ router.get("/", checkLogin, (req, res, next) => {
 router.get("/signin", (req, res, next) => {
   res.render("screens/signin");
 });
+router.post("/signin", (req,res)=>{
+    const loginQuery = `
+    SELECT email,
+           password
+      FROM people
+     WHERE email = "${req.body.email}"
+       AND password = "${req.body.password}"  
+    `;
+    db.query(loginQuery,(error,result)=>{
+        if(error) {
+            console.error(error);
+            return res.status(400).send("로그인 실패");
+        }else{
+            if(email = req.body.email , password = req.body.password) {
+                return res.status(200).send("로그인 성공");
+            }else{
+                return res.status(403).send("로그인 실패");
+            }
+        }
+    })
+});
+
 router.get("/signup", (req, res, next) => {
   res.render("screens/signup");
 });
