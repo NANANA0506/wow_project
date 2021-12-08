@@ -11,11 +11,8 @@ router.get("/question", (req, res, next) => {
                 content,
                 createdAt
           FROM  boards
-<<<<<<< HEAD
          ORDER  BY  content   ASC 
-=======
->>>>>>> refs/remotes/origin/master
-    `;
+`;
 
     try {
         db.query(selectQuery, (err, boards) => {
