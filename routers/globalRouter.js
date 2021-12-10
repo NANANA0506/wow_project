@@ -62,7 +62,7 @@ router.post("/signup", (req, res, next) => {
                 return res.status(403).send("이메일 이미 존재합니다.");
             }else{
                 const signupQuery = `
-                    INSERT INTO people (
+                    INSERT INTO users (
                         name,
                         birth,
                         gender,

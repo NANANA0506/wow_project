@@ -7,9 +7,21 @@ block content
                 .signupbody__box__col1__sec1
                     .signupbody__box__col1__sec1__title
                         a(href="/") 
-                            p WEOF WEBTOON
+                            p WE OF WEBTOON
                 .signupbody__box__col1__sec2
                     form.signupbody__box__col1__sec2__Form(action="/signup", method="POST")
+                        .signupbody__box__col1__sec2__Form__box
+                            input.signupbody__box__col1__sec2__Form__box__input(type="text" name="name" placeholder="Text..." ) 
+                            i.fas.fa-user
+                        .signupbody__box__col1__sec2__Form__box
+                            input.signupbody__box__col1__sec2__Form__box__input(type="number" name="birth" placeholder="Birth..." ) 
+                            i.fas.fa-user
+                        .signupbody__box__col1__sec2__Form__box
+                            input.signupbody__box__col1__sec2__Form__box__input(type="text" name="gender" placeholder="Gender...") 
+                            i.fas.fa-user
+                        .signupbody__box__col1__sec2__Form__box
+                            input.signupbody__box__col1__sec2__Form__box__input(type="number" name="phone_number" placeholder="Phone_number...") 
+                            i.fas.fa-user        
                         .signupbody__box__col1__sec2__Form__box
                             input.signupbody__box__col1__sec2__Form__box__input(type="email" name="signinemail" placeholder="Email...") 
                             i.fas.fa-user
@@ -18,12 +30,7 @@ block content
                             i.fas.fa-unlock-alt
                         input.signupbody__box__col1__sec2__submit(type="submit" value="SIGN UP")
                 .signupbody__box__col1__sec3
-                    .signupbody__box__col1__sec3__login1
-                        a(href="/") 
-                            p Forget Password?
-                    .signupbody__box__col1__sec3__login2
-                        a(href="/signin")  
-                            p signin
+                    
             .signupbody__box__col2
                 .signupbody__box__col2__sec
                     a(href="/")  
