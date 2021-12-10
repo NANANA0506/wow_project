@@ -1,4 +1,4 @@
-.siginbody {
+.signupbody {
   width: 100%;
   height: 100vh;
 
@@ -7,10 +7,10 @@
   align-items: center;
   justify-content: center;
 
-  background-color: bisque;
+  background-color: rgb(179, 231, 235);
 }
 
-.siginbody__box {
+.signupbody__box {
   width: 900px;
   height: 450px;
   background-color: #fff;
@@ -21,7 +21,7 @@
   box-shadow: 3px 3px 25px rgb(109, 109, 109);
 }
 
-.siginbody__box__col1 {
+.signupbody__box__col1 {
   width: 30%;
   height: 100%;
 
@@ -31,7 +31,7 @@
   padding: 0px 20px;
 }
 
-.siginbody__box__col1__sec1 {
+.signupbody__box__col1__sec1 {
   width: 100%;
   height: 20%;
 
@@ -41,16 +41,16 @@
   align-items: flex-start;
 }
 
-.siginbody__box__col1__sec1__title p {
+.signupbody__box__col1__sec1__title p {
   font-size: 25px;
 }
 
-.siginbody__box__col1__sec2 {
+.signupbody__box__col1__sec2 {
   width: 100%;
   height: 50%;
 }
 
-.siginbody__box__col1__sec2__Form {
+.signupbody__box__col1__sec2__Form {
   width: 100%;
   height: 100%;
 
@@ -60,12 +60,12 @@
   margin-top: 28px;
 }
 
-.siginbody__box__col1__sec2__Form__box {
+.signupbody__box__col1__sec2__Form__box {
   display: flex;
   flex-direction: row;
 }
 
-.siginbody__box__col1__sec2__Form__box i {
+.signupbody__box__col1__sec2__Form__box i {
   width: 30px;
   height: 30px;
 
@@ -79,11 +79,11 @@
   border-bottom: 1px solid rgb(175, 175, 175);
 }
 
-.siginbody__box__col1__sec2__Form__box i:hover {
+.signupbody__box__col1__sec2__Form__box i:hover {
   color: #777;
 }
 
-.siginbody__box__col1__sec2__Form__box__input {
+.signupbody__box__col1__sec2__Form__box__input {
   width: 200px;
   height: 30px;
 
@@ -101,12 +101,12 @@
   transition: 0.8s;
 }
 
-input.siginbody__box__col1__sec2__input:hover {
+input.signupbody__box__col1__sec2__input:hover {
   border-bottom: 1px solid #777;
   color: #777;
 }
 
-input.siginbody__box__col1__sec2__submit {
+input.signupbody__box__col1__sec2__submit {
   margin-top: 20px;
 
   width: 100px;
@@ -122,13 +122,13 @@ input.siginbody__box__col1__sec2__submit {
   border-radius: 18px;
 }
 
-input.siginbody__box__col1__sec2__submit:hover {
+input.signupbody__box__col1__sec2__submit:hover {
   border: 2px solid #41434e;
   background-color: #fff;
   color: #41434e;
 }
 
-.siginbody__box__col1__sec3 {
+.signupbody__box__col1__sec3 {
   width: 100%;
   height: 30%;
 
@@ -136,40 +136,40 @@ input.siginbody__box__col1__sec2__submit:hover {
   flex-direction: row;
 }
 
-.siginbody__box__col1__sec3__login1 {
+.signupbody__box__col1__sec3__login1 {
   margin-top: 35px;
   width: 60%;
   height: 50px;
 }
 
-.siginbody__box__col1__sec3__login2 {
+.signupbody__box__col1__sec3__login2 {
   margin-top: 35px;
   width: 40%;
   height: 50px;
   padding: 0px 30px;
 }
 
-.siginbody__box__col1__sec3__login1 p,
-.siginbody__box__col1__sec3__login2 p {
+.signupbody__box__col1__sec3__login1 p,
+.signupbody__box__col1__sec3__login2 p {
   font-size: 12px;
   color: #41434e;
 }
 
-.siginbody__box__col2 {
+.signupbody__box__col2 {
   width: 70%;
   height: 100%;
 }
 
-.siginbody__box__col2__sec {
+.signupbody__box__col2__sec {
   width: 100%;
   height: 100%;
 }
 
-.siginbody__box__col2__sec img {
+.signupbody__box__col2__sec img {
   width: 100%;
   height: 100%;
 
-  image-rendering: url("img/signin1.png");
+  image-rendering: url("img/signup1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
