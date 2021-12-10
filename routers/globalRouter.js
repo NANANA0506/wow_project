@@ -113,4 +113,7 @@ router.get("/termsofuse", (req, res, next) => {
   res.render("screens/termsofuse");
 });
 
+router.get("/naverwebtoon", (req, res, next) => {
+  res.render("screens/naverwebtoon");
+});
 module.exports = router;

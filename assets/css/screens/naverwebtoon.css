@@ -1,0 +1,17 @@
+.day {
+    width: 100%;
+    height: 300px;
+    background-color: aliceblue;
+}
+
+.ing {
+    width: 100%;
+    height: 300px;
+    background-color: aqua;
+}
+
+.finish {
+    width: 100%;
+    height: 300px;
+    background-color: blue;
+}
