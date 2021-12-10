@@ -1,4 +1,5 @@
 const express = require("express");
+const { resume } = require("../db");
 const db = require("../db");
 const conn = require("../db/index") 
 
@@ -109,8 +110,26 @@ router.post("/delete", (req, res, next) => {
     }
 });
 
-router.get("detail", (req, res, next) => {
-    res.render("screens/questiondetail")
-})
+router.get("/detail/:boardId", (req, res, next) => {
+    const {boardId} =req.params;
+ 
+        const detailQuery =`
+            SELECT  id,
+                    title,
+                    content,
+                    createdAt
+              FROM  boards
+             WHERE  id = ${boardId}
+        `;
+     
+    try {
+        conn.query(detailQuery, (err, result) => {
+            res.render("screens/questiondetail", {result : result[0]});  
+        });
+    } catch (error) {
+        console.error(error);
+        return res.status(400).send("접속 실페");
+    };
+});
 
 module.exports = router;

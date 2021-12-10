@@ -5,13 +5,12 @@ block content
         input(type="submit" value="작성하기") 
     
     each board in boards
-        form(action="/board/question", method="get")
-        form(action=`/board/detail/:${boardId}`) 
-            button 자세히보기
-                    div TITLE: #{board.title} 
-                    div CONTENT: #{board.content}
-                    div CREATEDAT: #{board.createdAt}
-                    div ID: #{board.id}
+        form(action=`/board/detail/${board.id}` method="GET") 
+            button
+                div TITLE: #{board.title} 
+                div CONTENT: #{board.content}
+                div CREATEDAT: #{board.createdAt}
+                div ID: #{board.id}
                 
         br
         hr
