@@ -24,7 +24,7 @@ router.post("/signin", (req,res)=>{
     const loginQuery = `
     SELECT email,
            password
-      FROM people
+      FROM users
      WHERE email = "${req.body.email}"
        AND password = "${req.body.password}"  
     `;
@@ -50,7 +50,7 @@ router.post("/signup", (req, res, next) => {
 
     const userCheckQuery=`
         SELECT email
-          FROM people
+          FROM users
          WHERE email="${req.body.email}"`;
         
     db.query(userCheckQuery,(error,result)=>{
