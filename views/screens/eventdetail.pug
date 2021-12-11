@@ -1,4 +1,19 @@
 extends ../layouts/base.pug
 
 block content
-        h1 eventdetail Page!
+    div 
+        h1 TITLE: #{result.title}
+        h2 CONTENT: #{result.content}
+        h3 CREATEDAT: #{result.createdAt}
+        h4 ID: #{result.id}
+
+        form(action="/event/update", method="get")
+            input(type="hidden" name="eventId" value=result.id)
+            input(type="submit" value="수정하기")
+
+        form(action="/event/delete", method="post")
+            input(type="hidden" name="eventId" value=result.id)
+            input(type="submit" value="삭제하기")
+
+        form(action="/event/list", method="get") 
+            input(type="submit", value="목록으로")

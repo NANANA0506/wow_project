@@ -81,6 +81,7 @@ router.post("/update/:updateId", (req, res, next) => {
     conn.query(updateQuery, (error, result) => {
         if(error){
             return res.status(400).send("게시글을 수정중 에러 발생 !");
+            console.error(error);
         }
     });
     res.redirect("screens/question");

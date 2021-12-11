@@ -1,4 +1,15 @@
 extends ../layouts/base.pug
 
 block content
-    h1 eventlist Page!
+    form(action="/event/create", method="GET")
+        input(type="submit" value="작성하기")
+
+    each event in events
+        form(action=`/event/detail/${event.id}`, method="get") 
+            button
+                div TITLE: #{event.title}  
+                div CONTENT: #{event.content}
+                div CREATEDAT: #{event.createdAt}
+                div ID: #{event.id}
+        br
+        hr

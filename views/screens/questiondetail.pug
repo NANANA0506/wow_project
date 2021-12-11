@@ -2,10 +2,10 @@ extends ../layouts/base.pug
 
 block content
     div
-        h1 #{result.title}
-        h2 #{result.content}
-        h3 #{result.createAt}
-        h4 #{result.id}
+        h1 TITLE: #{result.title}
+        h2 CONTENT: #{result.content}
+        h3 CREATEDAT#{result.createdAt}
+        h4 ID: #{result.id}
 
         form(action="/board/update", method="get")
             input(type="hidden" name="boardId" value=result.id)

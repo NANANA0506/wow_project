@@ -1,11 +1,10 @@
 extends ../layouts/base.pug
 
 block content 
-    form(action=`/board/update/:${board.id}`, method="get")
-        div 
-            label(htmlFor="title") TITLE 
-            input(type="text" name="title" id="title" required)
-        div 
-            label(htmlFor="content") CONTENT 
-            input(type="text" name="content" id="content" required)
-        input(type="submit" name="id" value="Update")
+    div 
+        label(htmlFor="title") TITLE 
+        input(type="text" name="title" id="title" required)
+    div 
+        label(htmlFor="content") CONTENT 
+        input(type="text" name="content" id="content" required)
+    input(type="submit" name="id" value="Update")
