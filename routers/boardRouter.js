@@ -74,8 +74,8 @@ router.post("/update/:updateId", (req, res, next) => {
     try {
         updateQuery = `
         UPDATE boards
-           SET title = ${title},
-               content = ${content}
+           SET title = ${req.body.title},
+               content = ${req.body.content}
          WHERE id = ${boardId}
     `;
     conn.query(updateQuery, (error, result) => {
