@@ -67,15 +67,16 @@ router.get("update", (req, res, next) => {
     res.render("screens/questionupdate");
 })
 
+
 router.post("/update/:updateId", (req, res, next) => {
     const {title, content} = req.body;
-    const {updateId} = req.params;
+    const {boardId} = req.body;
     try {
         updateQuery = `
-        UPDATE board
+        UPDATE boards
            SET title = ${title},
                content = ${content}
-         WHERE id = ${id}
+         WHERE id = ${boardId}
     `;
     conn.query(updateQuery, (error, result) => {
         if(error){
@@ -91,15 +92,16 @@ router.post("/update/:updateId", (req, res, next) => {
 
 router.post("/delete", (req, res, next) => {
 
-    const{id } = req.body;
+    const {boardId} =req.body;
 
     try {
         const deleteQuery = `
-            DELETE FROM board
-             WHERE id = ${id}
+            DELETE FROM boards
+             WHERE id = ${boardId}
         `;
         conn.query(deleteQuery, (error, result) => {
             if(error){
+                console.error(error)
                 return res.status(400).send("삭제 중 에러 발생!");
             }
             res.redirect("/board/question");
