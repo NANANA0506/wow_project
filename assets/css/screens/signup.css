@@ -101,6 +101,24 @@
   transition: 0.8s;
 }
 
+.signupbody__box__col1__sec2__Form__box__inputbirth {
+  width: 230px;
+  height: 30px;
+
+  font-size: 13px;
+  color: rgb(175, 175, 175);
+
+  border: none;
+  background: none;
+  outline: none;
+
+  border-bottom: 1px solid rgb(175, 175, 175);
+
+  margin: 10px 0px;
+
+  transition: 0.8s;
+}
+
 input.signupbody__box__col1__sec2__input:hover {
   border-bottom: 1px solid #777;
   color: #777;
