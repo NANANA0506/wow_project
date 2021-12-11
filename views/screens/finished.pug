@@ -2,7 +2,7 @@ extends ../layouts/base.pug
 
 
 block content
-    each webtoon in webtoons
+    each finishedWebtoon in finishedWebtoons
         section.wholeFinishedWebtoon
             main.main
                 section.content
@@ -10,10 +10,13 @@ block content
                         div.webtoonBox__top
                             div.poster
                         div.webtoonBox__bottom
-                            article.mr__title 웹툰 번호:---#{webtoon.id}
-                            article.mr__title #{webtoon.title}
-                            article.mr__score #{webtoon.score}
-                            article.mr__episode #{webtoon.episode}
-                            article.mr__episode #{webtoon.being}
+                            article.mr__title 웹툰 번호:---#{finishedWebtoon.id}
+                            article.mr__title #{finishedWebtoon.title}
+                            article.mr__score #{finishedWebtoon.score}
+                            article.mr__episode #{finishedWebtoon.episode}
+                            article.mr__episode #{finishedWebtoon.being}
+                            article.mr__episode #{finishedWebtoon.publish}
+
+
 
             
