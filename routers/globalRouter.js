@@ -1,7 +1,6 @@
 const db = require("../db");
 const express = require("express");
 const checkLogin = require("../middlewares/ckeckLogin");
-const mysql2 = require("mysql2");
 
 const router = express.Router();
 
@@ -13,37 +12,49 @@ router.get("/", checkLogin, (req, res, next) => {
   res.render("screens/home", { loggedIn });
 });
 
-// router.get("/", (req, res, next) => {
-//   res.render("screens/home");
-// });
-
-router.get("/signin", (req, res, next) => {
-  res.render("screens/signin");
+router.get("/signin", checkLogin, (req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/signin", {loggedIn});
 });
+
 router.post("/signin", (req, res) => {
-  const loginQuery = `
-    SELECT email,
-           password
-      FROM users
-     WHERE email = "${req.body.email}"
-       AND password = "${req.body.password}"  
+  const selectQuery = `
+    SELECT  id,
+            name,
+            email,
+            password,
+            birth,
+            phone_number
+      FROM  users
+     WHERE  email = "${req.body.signinEmail}"
+       AND  password = "${req.body.signinPassword}" 
     `;
-  db.query(loginQuery, (error, result) => {
-    if (error) {
-      console.error(error);
-      return res.status(400).send("로그인 실패");
-    } else {
-      if (((email = req.body.email), (password = req.body.password))) {
-        return res.status(200).send("로그인 성공");
-      } else {
-        return res.status(403).send("로그인 실패");
+
+try {
+  db.query(selectQuery, (error, rows) => {
+      if (error) {
+          console.error(error);
+          return res.redirect("/signin");
       }
-    }
-  });
+
+      if (rows.length === 0) {
+          return res.redirect("/signin");
+      }
+
+      req.session.isLoggedIn = true;
+      req.session.userId = rows[0].id;
+      return res.redirect("/");
+  })
+
+} catch (error) {
+  console.log(error);
+  return res.redirect("/signin");
+};
 });
 
-router.get("/signup", (req, res, next) => {
-  res.render("screens/signup");
+router.get("/signup", checkLogin, (req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/signup", {loggedIn});
 });
 
 router.post("/signup", (req, res, next) => {
@@ -88,6 +99,12 @@ router.post("/signup", (req, res, next) => {
       }
     }
   });
+});
+
+router.get("/logout", (req, res, next) => {
+  req.session.isLoggedIn = false;
+  req.session.userId = null;
+  return res.redirect("/");
 });
 
 router.get("/help", (req, res, next) => {

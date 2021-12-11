@@ -1,7 +1,10 @@
 const checkLogin = (req, res, next) => {
-  req.session.isLoggedIn = false;
-
-  next();
+  if (req.session.isLoggedIn) {
+      next();
+  } else {
+      req.session.isLoggedIn = false;
+      next();
+  };
 };
 
 module.exports = checkLogin;
