@@ -4,13 +4,14 @@ block content
     section.wholeWrapper 
         section.XX__left 
         section.rsWrapper 
-            section
+            div.questioncreateBox
                 form(action="/board/questioncreate" method="POST")
-                    div.wfBox
-                        label 제목
-                        input(type="text" name="input_title" placeholder="제목..") 
-                    div.wfBox
-                        label 내용
-                        textarea(name="input_content")  
-                    input(type="submit" value="create")       
+                    div.questioncreateBox__title
+                        input(type="text" name="input_title" placeholder="제목") 
+                    div.questioncreateBox__text
+                        textarea(name="input_content" placeholder="내용은 1000자 까지......") 
+                    div.questioncreateBox__button     
+                        input(type="submit" value="작성하기")
+                a(href="/board/questionlist")
+                    button 돌아가기     
         section.XX__right 
