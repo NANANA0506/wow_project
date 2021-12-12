@@ -13,4 +13,9 @@ block content
                     h2 작성자: #{bData.name} | 작성일: #{bData.createdAt}
                 div.questiondetailBox__text
                     h4 #{bData.content}
+                div.questiondetailBox__button
+                    a(href="/board/questionlist")  
+                        button 돌아가기
+                    a(href="/board/questioncreate")  
+                        button 작성하기   
         section.XX__right 
