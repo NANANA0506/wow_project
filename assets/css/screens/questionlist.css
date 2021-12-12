@@ -1,139 +1,145 @@
-.questiontop {
-    width: 100%;
-    height: 20vh;
+.questionimg {
+  width: 100%;
+  height: 280px;
+  background-image: url("https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1hY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin-bottom: 60px;
+}
+
+.questiontop {
+  width: 100%;
+  height: 20vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .questiontop p {
-   font-size: 30px;
-
+  font-size: 30px;
 }
 
 .questionBox {
-    width: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+  width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .questionBox__List {
-    width: 1300px;
-    height: 40px;
+  width: 1250px;
+  height: 40px;
 
-    border-top: 3px solid #222;
+  border-top: 3px solid #222;
 
-    background-color: rgb(250, 250, 250);
-    color: #222;
+  background-color: rgb(250, 250, 250);
+  color: #222;
 
-    display: flex;
-    flex-direction: row;
-
+  display: flex;
+  flex-direction: row;
 }
 
-.questionBox__List li:nth-child(1){
-    width: 10%;
-    height: 100%;
-    line-height: 32px;
-    border-right: 1px solid #fff;
-  
-    text-align: center;
+.questionBox__List li:nth-child(1) {
+  width: 10%;
+  height: 100%;
+  line-height: 32px;
+  border-right: 1px solid #fff;
+
+  text-align: center;
 }
 
-.questionBox__List li:nth-child(2){
-    width: 45%;
-    height: 100%;
-    line-height: 32px;
-    border-right: 1px solid #fff;
-  
-    text-align: center;
+.questionBox__List li:nth-child(2) {
+  width: 45%;
+  height: 100%;
+  line-height: 32px;
+  border-right: 1px solid #fff;
+
+  text-align: center;
 }
 
+.questionBox__List li:nth-child(3) {
+  width: 15%;
+  height: 100%;
+  line-height: 32px;
+  border-right: 1px solid #fff;
 
-.questionBox__List li:nth-child(3){
-    width: 15%;
-    height: 100%;
-    line-height: 32px;
-    border-right: 1px solid #fff;
-  
-    text-align: center;
+  text-align: center;
 }
 
+.questionBox__List li:nth-child(4) {
+  width: 30%;
+  height: 100%;
+  line-height: 32px;
+  border-right: 1px solid #fff;
 
-.questionBox__List li:nth-child(4){
-    width: 30%;
-    height: 100%;
-    line-height: 32px;
-    border-right: 1px solid #fff;
-  
-    text-align: center;
+  text-align: center;
 }
 
 .questionBox__dataList {
-    width: 1300px;
-    height: 25px;
+  width: 1250px;
+  height: 25px;
 
-    border-bottom: 1px solid rgb(207, 206, 206);
+  border-bottom: 1px solid rgb(207, 206, 206);
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-.questionBox__dataList li:nth-child(1){
-    width: 10%;
-    height: 100%;
-    line-height: 32px;
-    border-right: 1px solid #fff;
-  
-    text-align: center;
-    font-size: 11px;
+.questionBox__dataList li:nth-child(1) {
+  width: 10%;
+  height: 100%;
+  line-height: 32px;
+  border-right: 1px solid #fff;
+
+  text-align: center;
+  font-size: 11px;
 }
 
-.questionBox__dataList li:nth-child(2){
-    width: 45%;
-    height: 100%;
-    line-height: 32px;
-    border-right: 1px solid #fff;
-  
-    text-align: center;
-    font-size: 11px;
+.questionBox__dataList li:nth-child(2) {
+  width: 45%;
+  height: 100%;
+  line-height: 32px;
+  border-right: 1px solid #fff;
+
+  text-align: center;
+  font-size: 11px;
 }
 
-.questionBox__dataList li:nth-child(3){
-    width: 15%;
-    height: 100%;
-    line-height: 32px;
-    border-right: 1px solid #fff;
-  
-    text-align: center;
-    font-size: 11px;
+.questionBox__dataList li:nth-child(3) {
+  width: 15%;
+  height: 100%;
+  line-height: 32px;
+  border-right: 1px solid #fff;
+
+  text-align: center;
+  font-size: 11px;
 }
 
-.questionBox__dataList li:nth-child(4){
-    width: 30%;
-    height: 100%;
-    line-height: 32px;
-    border-right: 1px solid #fff;
-  
-    text-align: center;
-    font-size: 11px;
+.questionBox__dataList li:nth-child(4) {
+  width: 30%;
+  height: 100%;
+  line-height: 32px;
+  border-right: 1px solid #fff;
+
+  text-align: center;
+  font-size: 11px;
 }
 
 .questionbuttom {
-    width: 100%;
-    height: 50vh;
+  width: 100%;
+  height: 50vh;
 
-    padding: 0px 140px;
+  padding: 0px 165px;
 
-    margin-top: 40px;
+  margin-top: 40px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
