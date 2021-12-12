@@ -1,12 +1,24 @@
 .questionimg {
   width: 100%;
-  height: 280px;
+  height: 400px;
   background-image: url("https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1hY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+
   margin-bottom: 60px;
+}
+
+.questionimg p {
+    font-size: 27px;
+    color: #fff;
+    opacity: 1px;
 }
 
 .questiontop {
@@ -34,15 +46,18 @@
 
 .questionBox__List {
   width: 1250px;
-  height: 40px;
+  height: 43px;
 
   border-top: 3px solid #222;
+  border-bottom: 1px solid rgb(212, 212, 212);
 
   background-color: rgb(250, 250, 250);
   color: #222;
 
   display: flex;
   flex-direction: row;
+
+  font-size: 17px;
 }
 
 .questionBox__List li:nth-child(1) {
@@ -83,7 +98,7 @@
 
 .questionBox__dataList {
   width: 1250px;
-  height: 25px;
+  height: 32px;
 
   border-bottom: 1px solid rgb(207, 206, 206);
 
@@ -98,7 +113,7 @@
   border-right: 1px solid #fff;
 
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .questionBox__dataList li:nth-child(2) {
@@ -108,7 +123,7 @@
   border-right: 1px solid #fff;
 
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .questionBox__dataList li:nth-child(3) {
@@ -118,7 +133,7 @@
   border-right: 1px solid #fff;
 
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .questionBox__dataList li:nth-child(4) {
@@ -128,12 +143,12 @@
   border-right: 1px solid #fff;
 
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .questionbuttom {
   width: 100%;
-  height: 50vh;
+  height: 40vh;
 
   padding: 0px 165px;
 
@@ -142,4 +157,24 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.questionbuttom button {
+  width: 100px;
+  height: 40px;
+
+  font-size: 15px;
+
+  color: #fff;
+
+  background-color: #41434e;
+
+  border: none;
+  border-radius: 18px;
+}
+
+.questionbuttom button:hover {
+  border: 2px solid #41434e;
+  background-color: #fff;
+  color: #41434e;
 }

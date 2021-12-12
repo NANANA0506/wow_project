@@ -5,6 +5,7 @@ block content
         section.XX__left 
         section.rsWrapper
             div.questionimg
+                p CONTAC US
             div.questiontop
                 p 문의하기
             div.questionBox
@@ -22,7 +23,8 @@ block content
                             li #{b.createdAt}
             div.questionbuttom                
                 if loggedIn 
-                    a(href="/board/questioncreate") 글작성            
+                    a(href="/board/questioncreate") 
+                        button 글작성            
 
         section.XX__right 
         
