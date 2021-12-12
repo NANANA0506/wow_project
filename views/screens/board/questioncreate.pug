@@ -1,0 +1,16 @@
+extends ../../layouts/base.pug
+
+block content
+    section.wholeWrapper 
+        section.XX__left 
+        section.rsWrapper 
+            section.writeFormSection 
+                form(action="/board/questioncreate" method="POST")
+                    div.wfBox
+                        label 제목
+                        input(type="text" name="input_title" placeholder="제목..") 
+                    div.wfBox
+                        label 내용
+                        textarea(name="input_content")  
+                    input(type="submit" value="create")       
+        section.XX__right 

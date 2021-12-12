@@ -1,76 +1,101 @@
 const express = require("express");
-const { resume } = require("../db");
 const db = require("../db");
-const conn = require("../db/index") 
+const checkLogin = require("../middlewares/checkLogin");
 
 const router = express.Router();
 
-router.get("/question", (req, res, next) => {
+router.get("/questionlist", checkLogin, (req, res, next) => {
     const selectQuery = `
-        SELECT  id,
-                title,
-                content,
-                createdAt
-          FROM  boards
-         ORDER  BY  content   ASC 
-`;
-
+        SELECT 	A.id,
+                A.title,
+                B.name,
+                A.createdAt
+          FROM	boards	 A
+         INNER  
+          JOIN  users	 B
+            ON  A.userId = B.id
+         ORDER  BY	A.createdAt	 DESC
+    `;
+    const loggedIn = req.session.isLoggedIn;
     try {
-        db.query(selectQuery, (err, boards) => {
-
-            console.log(err);
-            console.log(boards);
-
-            res.render("screens/questionlist", {boards});
+        db.query(selectQuery, (err, rows) => {
+            return res.render("screens/board/questionlist", { loggedIn, boardList: rows });
         });
-    
     } catch (error) {
         console.error(error);
-        return res.redirect("/");
+        return res.status(400).send("데이터 조회에 실패했습니다.");
     };
 });
-router.get("/create", (req, res, next) => {
-    res.render("screens/questioncreate");
-})
 
-
-router.post("/create", (req, res, next) => {
-    const {title, content} = req.body;
-
-
-    const createQuery =`
-    INSERT INTO boards (
-        title,
-        content,
-        createdAt
-    ) VALUES (
-      "${req.body.title}",
-      "${req.body.content}",
-      now()
-    )
+router.get("/questiondetail", checkLogin, (req, res, next) => {
+ 
+    const detailQuery =`
+        SELECT 	A.id,
+                A.title,
+                A.content,
+                B.name,
+                A.createdAt
+        FROM	boards	 A
+        INNER  
+        JOIN  users	 B
+            ON  A.userId = B.id
+        WHERE  A.id = ${req.query.bid}
     `;
+
+    const loggedIn = req.session.isLoggedIn;
+
     try {
-        conn.query(createQuery, (error, result) => {
+        db.query(detailQuery, (err, rows) => {
+            res.render("screens/board/questiondetail", { loggedIn, bData: rows[0] });
+        });
+    } catch (error) {
+        console.error(error);
+        return res.status(400).send("작성하는데 실패하셨습니다.");
+    };    
+});
+
+router.get("/questioncreate", checkLogin, (req, res, next) => {
+    const loggedIn = req.session.isLoggedIn;
+    res.render("screens/board/questioncreate", {loggedIn});
+});
+
+router.post("/questioncreate", (req, res, next) => {
+    const createQuery = `
+        INSERT  INTO boards (
+            title,
+            content,
+            createdAt,
+            updatedAt,
+            userId
+        ) VALUES (
+            "${req.body.input_title}",
+            "${req.body.input_content}",
+            now(),
+            now(),
+            ${req.session.userId}
+        )
+    `;
+
+    try {
+        db.query(createQuery, (error, questions) => {
             if(error){
-                return res.status(400).send("잘못된 요청 입니다. 다시 시도해주세요.");
+                console.error(err);
+                return res.redirect("/board/questionlist");
             }
-        res.redirect("/board/question");
+        res.redirect("/board/questionlist");
         });
     } catch (error) {
         console.error(error);
         return res.status(400).send("게시글 생성에 실패했습니다.");
-        
-    }
-
+    };
 }); 
-router.get("update", (req, res, next) => {
+
+router.get("questionupdate", (req, res, next) => {
     res.render("screens/questionupdate");
-})
+});
 
-
-router.post("/update/:updateId", (req, res, next) => {
-    const {title, content} = req.body;
-    const {boardId} = req.body;
+router.post("/questionupdate/:updateId", (req, res, next) => {
+    
     try {
         updateQuery = `
         UPDATE boards
@@ -81,7 +106,6 @@ router.post("/update/:updateId", (req, res, next) => {
     conn.query(updateQuery, (error, result) => {
         if(error){
             return res.status(400).send("게시글을 수정중 에러 발생 !");
-            console.error(error);
         }
     });
     res.redirect("screens/question");
@@ -111,28 +135,6 @@ router.post("/delete", (req, res, next) => {
         console.error(error)
         return res.status(400).send("삭제에 실페했습니다.");
     }
-});
-
-router.get("/detail/:boardId", (req, res, next) => {
-    const {boardId} =req.params;
- 
-        const detailQuery =`
-            SELECT  id,
-                    title,
-                    content,
-                    createdAt
-              FROM  boards
-             WHERE  id = ${boardId}
-        `;
-     
-    try {
-        conn.query(detailQuery, (err, result) => {
-            res.render("screens/questiondetail", {result : result[0]});  
-        });
-    } catch (error) {
-        console.error(error);
-        return res.status(400).send("접속 실페");
-    };
 });
 
 module.exports = router;
