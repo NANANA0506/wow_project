@@ -4,20 +4,25 @@ block content
     section.wholeWrapper 
         section.XX__left 
         section.rsWrapper
-            div.qustionBox
-                ul.qustionBox__dataList
+            div.questionimg
+            div.questiontop
+                p 문의하기
+            div.questionBox
+                ul.questionBox__List
                     li 번호
                     li 제목
                     li 작성자
                     li 작성일
                 each b in boardList
-                    a.boardData(href=`/board/questiondetail?bid=${b.id}`)
-                        div #{b.id}
-                        div #{b.title}
-                        div #{b.name}
-                        div #{b.createdAt}
-            if loggedIn 
-                a(href="/board/questioncreate") 글작성            
+                    a(href=`/board/questiondetail?bid=${b.id}`)
+                        ul.questionBox__dataList
+                            li #{b.id}
+                            li #{b.title}
+                            li #{b.name}
+                            li #{b.createdAt}
+            div.questionbuttom                
+                if loggedIn 
+                    a(href="/board/questioncreate") 글작성            
 
         section.XX__right 
         
