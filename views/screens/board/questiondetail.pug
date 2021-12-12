@@ -7,9 +7,10 @@ block content
         section.rsWrapper 
             div.questiondetailBox
                 div.questiondetailBox__img
+                    a(href="/")
+                        button home 
+                    h1 #{bData.title}  
+                    h2 작성자: #{bData.name} | 작성일: #{bData.createdAt}
                 div.questiondetailBox__text
-                    h1 #{bData.title}
-                    h2 #{bData.name}
-                    h3 #{bData.createdAt}
                     h4 #{bData.content}
         section.XX__right 
