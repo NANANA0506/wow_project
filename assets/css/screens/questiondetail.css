@@ -1,6 +1,6 @@
 .questiondetailBox {
   width: 100%;
-  height: 150vh;
+  height: 170vh;
 
   display: flex;
   flex-direction: column;
@@ -50,4 +50,52 @@
 
   margin-top: 50px;
   padding: 0px 80px;
+}
+
+.questiondetailBox__button {
+  width: 100%;
+  height: 20vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.questiondetailBox__button .qdbtn1 button{
+  width: 100px;
+  height: 40px;
+
+  font-size: 15px;
+
+  color: #fff;
+
+  background-color: #41434e;
+
+  border: none;
+  border-radius: 18px;
+}
+
+.questiondetailBox__button .qdbtn1 button:hover {
+  border: 2px solid #41434e;
+  background-color: #fff;
+  color: #41434e;
+}
+
+.questiondetailBox__button .qdbtn2 button{
+  width: 100px;
+  height: 40px;
+
+  margin-top: 10px;
+
+  border: 2px solid #41434e;
+  background-color: #fff;
+  color: #41434e;
+
+  border-radius: 18px;
+}
+
+.questiondetailBox__button .qdbtn2 button:hover {
+  color: #fff;
+  background-color: #41434e;
 }
