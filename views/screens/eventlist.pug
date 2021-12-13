@@ -3,6 +3,8 @@ extends ../layouts/base.pug
 block content
     form(action="/event/create", method="GET")
         input(type="submit" value="작성하기")
+    form(action="/free/list", method="GET")
+        input(type="submit" value="freePage!") 
 
     each event in events
         form(action=`/event/detail/${event.id}`, method="get") 

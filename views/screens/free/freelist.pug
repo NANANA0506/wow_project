@@ -2,7 +2,9 @@ extends ../../layouts/base.pug
 
 block content
     form(action="/free/create", method="GET")
-        input(type="submit" value="작성하기") 
+        input(type="submit" value="작성하기")
+    form(action="/event/list", method="GET")
+        input(type="submit" value="eventPage!!") 
 
     each free in frees
         form(action=`/free/detail/${free.id}`, method="GET")
