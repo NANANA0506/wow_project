@@ -6,6 +6,7 @@ const globalRouter = require("./routers/globalRouter");
 const boardRouter = require("./routers/boardRouter");
 const webtoonRouter = require("./routers/webtoonRouter");
 const eventRouter = require("./routers/eventRouter");
+const freeRouter = require("./routers/freeRouter");
 const path = require("path");
 const session = require("express-session");
 
@@ -29,6 +30,7 @@ app.use("/", globalRouter);
 app.use("/board", boardRouter);
 app.use("/webtoon", webtoonRouter);
 app.use("/event", eventRouter);
+app.use("/free", freeRouter)
 
 app.listen(PORT, () => {
   console.log(`🐾🐶http://localhost:${PORT} WOW✨ SERVER START🐰🥕`);

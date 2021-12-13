@@ -1,0 +1,16 @@
+extends ../../layouts/base.pug
+
+block content
+    form(action="/free/create", method="GET")
+        input(type="submit" value="작성하기") 
+
+    each free in frees
+        form(action=`/free/detail/${free.id}`, method="GET")
+            button 
+                div TITLE: #{free.title}
+                div CONTENT: #{free.content}
+                div CREATEDAT: #{free.createdAt}
+                div ID: #{free.id}
+                div ANONYMOUSNAME: #{free.anonymousName}
+        hr
+        br
