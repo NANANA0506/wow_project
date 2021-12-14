@@ -35,12 +35,12 @@ router.get("/questiondetail", checkLogin, (req, res, next) => {
                 A.content,
                 B.name,
                 A.createdAt
-        FROM	boards	 A
-        INNER  
-        JOIN  users	 B
+          FROM	boards	 A
+         INNER  
+          JOIN  users	 B
             ON  A.userId = B.id
-        WHERE  A.id = ${req.query.bid}
-    `;
+         WHERE  A.id = ${req.query.bid}
+     `;
 
     const loggedIn = req.session.isLoggedIn;
 

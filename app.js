@@ -7,6 +7,7 @@ const boardRouter = require("./routers/boardRouter");
 const webtoonRouter = require("./routers/webtoonRouter");
 const eventRouter = require("./routers/eventRouter");
 const freeRouter = require("./routers/freeRouter");
+const noticeRouter = require("./routers/noticeRouter");
 const path = require("path");
 const session = require("express-session");
 
