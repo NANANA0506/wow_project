@@ -82,9 +82,9 @@ router.post("/eventcreate", (req, res, next) => {
     db.query(createQuery, (error, events) => {
       if (error) {
         console.error(err);
-                return res.redirect("/event/eventslist");
+        return res.redirect("/event/eventslist");
       }
-      res.redirect("/event/list");
+      res.redirect("/event/eventlist");
     });
   } catch (error) {
     console.error(error);
@@ -105,7 +105,7 @@ router.post("/delete", (req, res, next) => {
         console.error(error);
         return res.status(400).send("삭제 중 애러 발생!");
       }
-      res.redirect("event/event/list");
+      res.redirect("event/eventlist");
     });
   } catch (error) {
     console.error(error);
