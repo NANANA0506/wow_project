@@ -8,7 +8,7 @@ block content
                 a(href="/event/eventlist") 
                     p 이벤트
             div.eventlist    
-                a(href="/event/list") 
+                a(href="/board/questionlist") 
                     p 문의하기
                 a(href="/free/list") 
                     p 자유게시판
@@ -24,38 +24,16 @@ block content
                     li 제목
                     li 작성자
                     li 작성일
-                each b in boardList
-                    a(href=`/board/questiondetail?bid=${b.id}`)
-                        ul.questionBox__dataList
+                each b in eventList
+                    a(href=`/event/eventdetail?bid=${b.id}`)
+                        ul.eventBox__dataList
                             li #{b.id}
                             li #{b.title}
                             li #{b.name}
                             li #{b.createdAt}
             div.eventbuttom                
                 if loggedIn 
-                    a(href="/event/questioncreate") 
+                    a(href="/event/eventcreate") 
                         button 글작성            
 
         section.XX__right 
-        
-
-
-
-
-
-
-
-    form(action="/event/create", method="GET")
-        input(type="submit" value="작성하기")
-    form(action="/free/list", method="GET")
-        input(type="submit" value="freePage!") 
-
-    each event in events
-        form(action=`/event/detail/${event.id}`, method="get") 
-            button
-                div TITLE: #{event.title}  
-                div CONTENT: #{event.content}
-                div CREATEDAT: #{event.createdAt}
-                div ID: #{event.id}
-        br
-        hr 
