@@ -1,26 +1,3 @@
-.questionimg {
-  width: 100%;
-  height: 400px;
-  background-image: url("https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1hY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.9;
-
-  margin-bottom: 60px;
-}
-
-.questionimg p {
-    font-size: 27px;
-    color: #fff;
-    opacity: 1px;
-}
-
 .questiontop {
   width: 100%;
   height: 20vh;

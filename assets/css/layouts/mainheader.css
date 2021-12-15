@@ -1,0 +1,49 @@
+header {
+  background: url("https://i.pinimg.com/474x/4a/1d/be/4a1dbedb27671593b4e89c11075a2702.jpg");
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+header .mainheader {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 80px;
+  margin-bottom: 30px;
+  margin-top: 150px;
+  color: #fff;
+}
+
+h3,
+.mainheader p {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #333;
+  background: #fff;
+  margin-bottom: 50px;
+  box-shadow: 0 3px 20px 0 #0000003b;
+}
+button:hover {
+  cursor: pointer;
+}
