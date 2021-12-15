@@ -1,6 +1,5 @@
 const express = require("express");
 const db = require("../db");
-const conn = require("../db/index");
 
 const router = express.Router();
 
@@ -46,7 +45,7 @@ router.post("/create", (req, res, next) => {
     )
     `;
     try {
-        conn.query(createQuery, (error, result) => {
+        db.query(createQuery, (error, result) => {
             if(error){
                 return res.status(400).send("잘못된 요청입니다. 다시 시도해주세요.");
             }
@@ -71,7 +70,7 @@ router.get("/detail/:eventId", (req, res, next) => {
         `;
     
     try {
-        conn.query(detailQuery, (err, result) => {
+        db.query(detailQuery, (err, result) => {
             res.render("screens/eventdetail", {result : result[0]});
         });
     } catch (error) {
@@ -88,7 +87,7 @@ router.post("/delete", (req, res, next) => {
             DELETE FROM events
              WHERE  id = ${eventId}
         `;
-        conn.query(deleteQuery, (error, result) => {
+        db.query(deleteQuery, (error, result) => {
             if(error){
                 console.error(error)
                 return res.status(400).send("삭제 중 애러 발생!");

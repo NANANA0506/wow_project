@@ -1,15 +1,40 @@
 .questiontop {
   width: 100%;
-  height: 20vh;
+  height: 8vh;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  margin-top: 50px;
 }
 
 .questiontop p {
   font-size: 30px;
+}
+
+.questionlist {
+  width: 100%;
+  height: 5vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+}
+
+.questionlist p {
+  margin: 0px 10px;
+  color: #777;
+}
+
+.questionlist p:hover {
+  margin: 0px 10px;
+  color: #666;
+  border-bottom: 2.5px solid #666;
 }
 
 .questionBox {
@@ -125,7 +150,7 @@
 
 .questionbuttom {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
 
   padding: 0px 165px;
 

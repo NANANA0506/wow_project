@@ -5,7 +5,19 @@ block content
         section.XX__left 
         section.rsWrapper
             div.questiontop
-                p 문의하기
+                a(href="/board/questionlist") 
+                    p 문의하기
+            div.questionlist    
+                a(href="/event/list") 
+                    p 이벤트
+                a(href="/free/list") 
+                    p 자유게시판
+                a(href="/") 
+                    p 공지사항 
+                a(href="/") 
+                    p FAQ  
+                a(href="/") 
+                    p Q＆A               
             div.questionBox
                 ul.questionBox__List
                     li 번호
