@@ -60,6 +60,7 @@ router.get("/questioncreate", checkLogin, (req, res, next) => {
 });
 
 router.post("/questioncreate", (req, res, next) => {
+    
     const createQuery = `
         INSERT  INTO boards (
             title,
