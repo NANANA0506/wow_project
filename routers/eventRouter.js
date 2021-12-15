@@ -78,11 +78,12 @@ router.post("/eventcreate", (req, res, next) => {
         ${req.session.userId}
     )
     `;
+
   try {
     db.query(createQuery, (error, events) => {
       if (error) {
         console.error(err);
-        return res.redirect("/event/eventslist");
+        return res.redirect("/event/eventlist");
       }
       res.redirect("/event/eventlist");
     });

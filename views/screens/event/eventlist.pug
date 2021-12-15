@@ -4,10 +4,10 @@ block content
     section.wholeWrapper 
         section.XX__left 
         section.rsWrapper
-            div.eventtop
+            div.questiontop
                 a(href="/event/eventlist") 
                     p 이벤트
-            div.eventlist    
+            div.questionlist    
                 a(href="/board/questionlist") 
                     p 문의하기
                 a(href="/free/list") 
@@ -18,20 +18,20 @@ block content
                     p FAQ  
                 a(href="/") 
                     p Q＆A               
-            div.eventBox
-                ul.eventBox__List
+            div.questionBox
+                ul.questionBox__List
                     li 번호
                     li 제목
                     li 작성자
                     li 작성일
                 each b in eventList
                     a(href=`/event/eventdetail?bid=${b.id}`)
-                        ul.eventBox__dataList
+                        ul.questionBox__dataList
                             li #{b.id}
                             li #{b.title}
                             li #{b.name}
                             li #{b.createdAt}
-            div.eventbuttom                
+            div.questionbuttom                
                 if loggedIn 
                     a(href="/event/eventcreate") 
                         button 글작성            
