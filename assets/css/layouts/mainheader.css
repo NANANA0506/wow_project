@@ -1,5 +1,5 @@
 header {
-  background: url("https://i.pinimg.com/474x/4a/1d/be/4a1dbedb27671593b4e89c11075a2702.jpg");
+  background: url("https://i.pinimg.com/474x/2d/0c/c4/2d0cc4d1ebbedea829a4740f8a269083.jpg");
   text-align: center;
   width: 100%;
   height: 700px;
@@ -19,7 +19,7 @@ header .mainheader {
   background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
 }
 
-h1 {
+.mainheader h1 {
   font-family: "Dancing Script", cursive;
   font-size: 80px;
   margin-bottom: 30px;
@@ -27,14 +27,14 @@ h1 {
   color: #fff;
 }
 
-h3,
+.mainheader h3,
 .mainheader p {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 30px;
   color: #fff;
 }
 
-button {
+.mainheader button {
   border: none;
   outline: none;
   padding: 10px 20px;
