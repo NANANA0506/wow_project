@@ -30,7 +30,7 @@ router.get("/eventlist", checkLogin, (req, res, next) => {
   }
 });
 
-router.get("eventdetail", checkLogin, (req, res, next) => {
+router.get("/eventdetail", checkLogin, (req, res, next) => {
   const detailQuery = `
         SELECT 	A.id,
                 A.title,
