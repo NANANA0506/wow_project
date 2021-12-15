@@ -18,6 +18,7 @@ router.get("/eventlist", checkLogin, (req, res, next) => {
     `;
   const loggedIn = req.session.isLoggedIn;
   try {
+    console.log(b);
     db.query(selectQuery, (err, rows) => {
       return res.render("screens/event/eventlist", {
         loggedIn,
@@ -45,6 +46,7 @@ router.get("/eventdetail", checkLogin, (req, res, next) => {
     `;
 
   const loggedIn = req.session.isLoggedIn;
+  console.log(b);
 
   try {
     db.query(detailQuery, (err, rows) => {
@@ -74,7 +76,7 @@ router.post("/eventcreate", (req, res, next) => {
         "${req.body.input_title}",
         "${req.body.input_content}",
         now(),
-        now(),
+        now(),  
         ${req.session.userId}
     )
     `;
