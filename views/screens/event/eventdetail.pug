@@ -2,18 +2,20 @@ extends ../../layouts/main.pug
 
 block content
     div 
-        h1 TITLE: #{result.title}
-        h2 CONTENT: #{result.content}
-        h3 CREATEDAT: #{result.createdAt}
-        h4 ID: #{result.id}
-
-        form(action="/event/update", method="get")
-            input(type="hidden" name="eventId" value=result.id)
-            input(type="submit" value="수정하기")
-
-        form(action="/event/delete", method="post")
-            input(type="hidden" name="eventId" value=result.id)
-            input(type="submit" value="삭제하기")
-
-        form(action="/event/list", method="get") 
-            input(type="submit", value="목록으로")   
+        section.wholeWrapper 
+        section.XX__left 
+        section.rsWrapper 
+            div.questiondetailBox
+                div.questiondetailBox__img
+                    a(href="/")
+                        button home 
+                    h1 #{bData.title}  
+                    h2 작성자: #{bData.name} | 작성일: #{bData.createdAt}
+                div.questiondetailBox__text
+                    h4 #{bData.content}
+                div.questiondetailBox__button
+                    a.qdbtn1(href="/event/eventlist")  
+                        button 돌아가기
+                    a.qdbtn2(href="/event/eventcreate")  
+                        button 작성하기   
+        section.XX__right 

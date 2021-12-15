@@ -1,13 +1,17 @@
 extends ../../layouts/main.pug
 
 block content
-    form(action="/event/create", method="post")
-        div 
-            label(htmlFor="title") TITLE 
-            input(type="text" name="title" id="title" required)
-        div 
-            label(htmlFor="content") CONTENT 
-            input(type="text" name="content" id="content" required)
-        input(type="submit" value="Write")
-    form(action="/event/list", method="get")
-        input(type="submit" value="목록으로")        
+    section.wholeWrapper 
+        section.XX__left 
+        section.rsWrapper 
+            div.questioncreateBox
+                form(action="/event/evnetcreate" method="POST")
+                    div.questioncreateBox__title
+                        input(type="text" name="input_title" placeholder="제목") 
+                    div.questioncreateBox__text
+                        textarea(name="input_content" placeholder="내용은 1000자 까지......") 
+                    div.questioncreateBox__button     
+                        input(type="submit" value="작성하기")
+                a(href="/event/eventlist")
+                    button 돌아가기     
+        section.XX__right 

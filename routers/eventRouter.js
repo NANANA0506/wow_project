@@ -7,9 +7,9 @@ const router = express.Router();
 router.get("/eventlist", checkLogin, (req, res, next) => {
   const selectQuery = `
         SELECT 	A.id,
-        A.title,
-        B.name,
-        A.createdAt
+                A.title,
+                B.name,
+                A.createdAt
         FROM	events	 A
         INNER  
         JOIN  users	 B
