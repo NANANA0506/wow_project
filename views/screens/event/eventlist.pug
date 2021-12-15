@@ -1,6 +1,50 @@
 extends ../../layouts/main.pug
 
 block content
+    section.wholeWrapper 
+        section.XX__left 
+        section.rsWrapper
+            div.eventtop
+                a(href="/board/questionlist") 
+                    p 이벤트
+            div.eventlist    
+                a(href="/event/list") 
+                    p 문의하기
+                a(href="/free/list") 
+                    p 자유게시판
+                a(href="/") 
+                    p 공지사항 
+                a(href="/") 
+                    p FAQ  
+                a(href="/") 
+                    p Q＆A               
+            div.eventBox
+                ul.eventBox__List
+                    li 번호
+                    li 제목
+                    li 작성자
+                    li 작성일
+                each b in boardList
+                    a(href=`/board/questiondetail?bid=${b.id}`)
+                        ul.questionBox__dataList
+                            li #{b.id}
+                            li #{b.title}
+                            li #{b.name}
+                            li #{b.createdAt}
+            div.eventbuttom                
+                if loggedIn 
+                    a(href="/event/questioncreate") 
+                        button 글작성            
+
+        section.XX__right 
+        
+
+
+
+
+
+
+
     form(action="/event/create", method="GET")
         input(type="submit" value="작성하기")
     form(action="/free/list", method="GET")

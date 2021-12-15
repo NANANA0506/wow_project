@@ -1,36 +1,37 @@
 const express = require("express");
 const db = require("../db");
+const checkLogin = require("../middlewares/checkLogin");
 
 const router = express.Router();
 
-router.get("/list", (req, res, next) => {
+router.get("/eventlist", checkLogin, (req, res, next) => {
     const selectQuery = `
-        SELECT  id,
-                title,
-                content,
-                createdAt
-          FROM  events
-         ORDER  BY  id      ASC
-`;
+        SELECT 	A.id,
+        A.title,
+        B.name,
+        A.createdAt
+        FROM	events	 A
+        INNER  
+        JOIN  users	 B
+        ON  A.userId = B.id
+        ORDER  BY	A.createdAt	 DESC
+    `;
+    const loggedIn = req.session.isLoggedIn;
     try {
-        db.query(selectQuery, (err, events) => {
-
-            console.log(err);
-            console.log(events);
-
-            res.render("screens/eventlist", {events});
-        })
+        db.query(selectQuery, (err, rows) => {
+            return res.render("screens/event/eventlist", { loggedIn, eventList: rows });
+        });
     } catch (error) {
         console.error(error);
-        return res.redirect("/");
-    }
+        return res.status(400).send("데이터 조회에 실패했습니다.");
+    };
 });
 
-router.get("/create", (req, res, next) => {
-    res.render("screens/eventcreate");
+router.get("/eventcreate", (req, res, next) => {
+    res.render("screens/event/eventcreate");
 })
 
-router.post("/create", (req, res, next) => {
+router.post("/eventcreate", (req, res, next) => {
     const {title, content} = req.body;
 
     const createQuery = `
@@ -57,7 +58,7 @@ router.post("/create", (req, res, next) => {
     }
 });
 
-router.get("/detail/:eventId", (req, res, next) => {
+router.get("eventdetail/:eventId", (req, res, next) => {
     const {eventId} =req.params;
 
         const detailQuery = `
@@ -71,7 +72,7 @@ router.get("/detail/:eventId", (req, res, next) => {
     
     try {
         db.query(detailQuery, (err, result) => {
-            res.render("screens/eventdetail", {result : result[0]});
+            res.render("screens/event/eventdetail", {result : result[0]});
         });
     } catch (error) {
         console.error(error);
@@ -92,7 +93,7 @@ router.post("/delete", (req, res, next) => {
                 console.error(error)
                 return res.status(400).send("삭제 중 애러 발생!");
             }
-            res.redirect("/event/list");
+            res.redirect("event/event/list");
         });
     } catch (error) {
         console.error(error)
@@ -101,7 +102,7 @@ router.post("/delete", (req, res, next) => {
 });
 
 router.get("/update", (req, res, next) => {
-    res.render("screens/eventupdate");
+    res.render("screens/event/eventupdate");
 });
 
 module.exports = router;
