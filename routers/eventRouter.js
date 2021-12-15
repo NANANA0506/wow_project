@@ -64,20 +64,25 @@ router.get("/eventcreate", checkLogin, (req, res, next) => {
 router.post("/eventcreate", (req, res, next) => {
 
   const createQuery = `
-    INSERT INTO events (
+    INSERT  INTO events (
         title,
         content,
-        createdAt
+        createdAt,
+        updatedAt,
+        userId
     ) VALUES (
-      "${req.body.title}",
-      "${req.body.content}",
-      now()
+        "${req.body.input_title}",
+        "${req.body.input_content}",
+        now(),
+        now(),
+        ${req.session.userId}
     )
     `;
   try {
-    db.query(createQuery, (error, result) => {
+    db.query(createQuery, (error, events) => {
       if (error) {
-        return res.status(400).send("잘못된 요청입니다. 다시 시도해주세요.");
+        console.error(err);
+                return res.redirect("/event/eventslist");
       }
       res.redirect("/event/list");
     });
