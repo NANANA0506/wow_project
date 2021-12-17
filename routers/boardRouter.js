@@ -46,6 +46,7 @@ router.get("/questiondetail", checkLogin, (req, res, next) => {
 
     try {
         db.query(detailQuery, (err, rows) => {
+
             res.render("screens/board/questiondetail", { loggedIn, bData: rows[0] });
         });
     } catch (error) {
@@ -104,7 +105,7 @@ router.post("/questionupdate/:updateId", (req, res, next) => {
                content = ${req.body.content}
          WHERE id = ${boardId}
     `;
-    conn.query(updateQuery, (error, result) => {
+    db.query(updateQuery, (error, result) => {
         if(error){
             return res.status(400).send("게시글을 수정중 에러 발생 !");
         }
@@ -116,24 +117,24 @@ router.post("/questionupdate/:updateId", (req, res, next) => {
     }
 });
 
-router.post("/delete", (req, res, next) => {
+router.post("/questiondelete", (req, res, next) => {
 
-    const {boardId} =req.body;
+    const {bDataId} = req.body;
 
     try {
         const deleteQuery = `
             DELETE FROM boards
-             WHERE id = ${boardId}
+             WHERE id = ${bDataId}
         `;
-        conn.query(deleteQuery, (error, result) => {
+        db.query(deleteQuery, (error, bData) => {
             if(error){
-                console.error(error)
+                console.error(error);
                 return res.status(400).send("삭제 중 에러 발생!");
             }
-            res.redirect("screens/board/question");
+            res.redirect("/board/questionlist");
         });
     } catch (error) {
-        console.error(error)
+        console.error(error);
         return res.status(400).send("삭제에 실페했습니다.");
     }
 });

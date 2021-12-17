@@ -2,7 +2,7 @@ extends ../../layouts/base.pug
 
 block content
     div
-       section.wholeWrapper 
+        section.wholeWrapper 
         section.XX__left 
         section.rsWrapper 
             div.questiondetailBox
@@ -17,5 +17,8 @@ block content
                     a.qdbtn1(href="/board/questionlist")  
                         button 돌아가기
                     a.qdbtn2(href="/board/questioncreate")  
-                        button 작성하기   
+                        button 작성하기
+                    form(action="/board/questiondelete", method="post") 
+                        input(type="hidden" name="bDataId" value=bData.id)
+                        input(type="submit", value="삭제하기") 
         section.XX__right 
