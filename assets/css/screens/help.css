@@ -19,7 +19,7 @@
     background-color: #222;
     color: #fff;
 
-    padding: 0px 100px 100px;
+    padding: 0px 75px 100px;
 }
 
 .question {
@@ -53,6 +53,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 30px 0px;
 }
 
 .question2 .howsignup .howsignup__1 {
@@ -61,6 +63,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howsignup .howsignup__2 {
@@ -69,6 +73,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howsignup .howsignup__3 {
@@ -77,6 +83,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howsignup .howsignup__4 {
@@ -85,6 +93,18 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
+}
+
+.question2 .howsignup .howsignup__5 {
+    font-size: 16px;
+    font-weight: 200;
+
+    background-color: #222;
+    color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howsignin {
@@ -96,6 +116,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 30px 0px;
 }
 
 .question2 .howsignin .howsignin__1 {
@@ -104,6 +126,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howsignin .howsignin__2 {
@@ -112,6 +136,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howsignin .howsignin__3 {
@@ -120,6 +146,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howsignin .howsignin__4 {
@@ -128,6 +156,18 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
+}
+
+.question2 .howsignin .howsignin__5 {
+    font-size: 16px;
+    font-weight: 200;
+
+    background-color: #222;
+    color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .whatwow {
@@ -139,6 +179,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 30px 0px;
 }
 
 .question2 .whatwow .whatwow__1 {
@@ -147,6 +189,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .whatwow .whatwow__2 {
@@ -155,6 +199,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howusewow {
@@ -166,6 +212,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 30px 0px;
 }
 
 .question2 .howusewow .howusewow__1 {
@@ -174,6 +222,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howusewow .howusewow__2 {
@@ -182,6 +232,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howusewow .howusewow__3 {
@@ -190,6 +242,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .question2 .howusewow .howusewow__4 {
@@ -198,6 +252,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .whathelp {
@@ -233,6 +289,8 @@
     color: #fff;
 
     border-bottom: thick double black;
+
+    padding: 0px 30px 0px;
 }
 
 .whathelp2 .signup .signup__1 {
@@ -241,6 +299,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .whathelp2 .signin {
@@ -254,6 +314,8 @@
     color: #fff;
 
     border-bottom: thick double black;
+
+    padding: 0px 30px 0px;
 }
 
 .whathelp2 .signin .signin__1 {
@@ -262,6 +324,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .whathelp2 .home {
@@ -275,6 +339,8 @@
     color: #fff;
 
     border-bottom: thick double black;
+
+    padding: 0px 30px 0px;
 }
 
 .whathelp2 .home__1 {
@@ -283,6 +349,8 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
 }
 
 .whathelp2 .other {
@@ -296,6 +364,8 @@
     color: #fff;
 
     border-bottom: thick double black;
+
+    padding: 0px 30px 0px;
 }
 
 .whathelp2 .other__1{
@@ -304,4 +374,16 @@
 
     background-color: #222;
     color: #fff;
+
+    padding: 0px 50px 0px;
+}
+
+.whathelp2 .other__2{
+    font-size: 16px;
+    font-weight: 200;
+
+    background-color: #222;
+    color: #fff;
+
+    padding: 0px 50px 0px;
 }
