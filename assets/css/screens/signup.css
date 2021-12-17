@@ -78,6 +78,18 @@
 
   border-bottom: 1px solid rgb(175, 175, 175);
 }
+.signupbody__box__col1__sec2__Form__gamil{
+  width: 10px;
+  height: 30px;
+
+  font-size: 14px;
+  margin: 10px 0px;
+
+  color: rgb(175, 175, 175);
+
+  padding: 5px;
+  border-bottom: 1px solid rgb(175, 175, 175);
+}
 
 .signupbody__box__col1__sec2__Form__box i:hover {
   color: #777;

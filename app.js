@@ -5,6 +5,7 @@ dotenv.config();
 const globalRouter = require("./routers/globalRouter");
 const boardRouter = require("./routers/boardRouter");
 const webtoonRouter = require("./routers/webtoonRouter");
+const naverwebtoonRouter = require("./routers/naverwebtoonRouter");
 const eventRouter = require("./routers/eventRouter");
 const freeRouter = require("./routers/freeRouter");
 const noticeRouter = require("./routers/noticeRouter");

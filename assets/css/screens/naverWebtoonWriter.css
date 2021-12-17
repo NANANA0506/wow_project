@@ -1,0 +1,22 @@
+.naverwebtoon_header{
+    width: 100%;
+    height: 70px;
+    background-color: green;
+}
+.writerlist{
+    width: 100%;
+}
+.writerlist ul {
+    display: flex;
+    flex-direction: row;
+
+    background-color:yellow;
+}
+
+.naverwebtoons{
+    width: 100%;
+    height: 3000px;
+    background-color: black;
+}
+
+
