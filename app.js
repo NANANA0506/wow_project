@@ -32,7 +32,8 @@ app.use("/", globalRouter);
 app.use("/board", boardRouter);
 app.use("/webtoon", webtoonRouter);
 app.use("/event", eventRouter);
-app.use("/free", freeRouter)
+app.use("/free", freeRouter);
+app.use("/notice", noticeRouter);
 
 app.listen(PORT, () => {
   console.log(`🐾🐶http://localhost:${PORT} WOW✨ SERVER START🐰🥕`);

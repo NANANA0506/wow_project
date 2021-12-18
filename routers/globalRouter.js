@@ -93,11 +93,11 @@ router.post("/signup", (req, res, next) => {
             console.error(error);
             return res.status(400).send("회원가입 실패");
           } else {
-            res.status(201).send("회원가입 성공");
-          }
+            res.redirect("/");
+          };
         });
-      }
-    }
+      };
+    };
   });
 });
 

@@ -64,7 +64,6 @@ router.get("/eventcreate", checkLogin, (req, res, next) => {
 });
 
 router.post("/eventcreate", (req, res, next) => {
-
   const createQuery = `
     INSERT  INTO events (
         title,
