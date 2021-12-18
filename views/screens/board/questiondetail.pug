@@ -18,6 +18,11 @@ block content
                         button 돌아가기
                     a.qdbtn2(href="/board/questioncreate")  
                         button 작성하기
+                    form(action=`/board/questionupdate?bdataId=${bDataId}`, method="post") 
+                        input(type="hidden" name="bDataId" value=bData.id)
+                        input(type="hidden" name="bDatatitle" value=bData.title)
+                        input(type="hidden" name="bDatacontent" value=bData.content)
+                        input(type="submit", value="수정하기")
                     form(action="/board/questiondelete", method="post") 
                         input(type="hidden" name="bDataId" value=bData.id)
                         input(type="submit", value="삭제하기") 

@@ -18,4 +18,7 @@ block content
                         button 돌아가기
                     a.qdbtn2(href="/event/eventcreate")  
                         button 작성하기   
+                    form(action="/event/eventdelete", method="post") 
+                        input(type="hidden" name="bDataId" value=bData.id)
+                        input(type="submit", value="삭제하기") 
         section.XX__right 

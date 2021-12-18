@@ -92,29 +92,34 @@ router.post("/questioncreate", (req, res, next) => {
     };
 }); 
 
-router.get("questionupdate", (req, res, next) => {
+router.get("/questionupdate", (req, res, next) => {
     res.render("screens/board/questionupdate");
 });
 
-router.post("/questionupdate/:updateId", (req, res, next) => {
-    
+router.post("/questionupdate", (req, res, next) => {
+    const {bDataId} = req.body;
+    const {bDatatitle, bDatacontent} = req.body;
+
     try {
         updateQuery = `
         UPDATE boards
-           SET title = ${req.body.title},
-               content = ${req.body.content}
-         WHERE id = ${boardId}
+           SET title = "${bDatatitle}",
+               content = "${bDatacontent}",
+               updatedAt = now()
+         WHERE id = ${bDataId}
     `;
     db.query(updateQuery, (error, result) => {
         if(error){
+            console.error(error);
             return res.status(400).send("게시글을 수정중 에러 발생 !");
         }
+        res.redirect("/board/questionupdate")
     });
-    res.redirect("screens/board/question");
     } catch (error) {
-      console.error(error)
+      console.error(error);
       res.status(400).send("게시글을 수정할 수 없습니다.")
     }
+    res.redirect("/board/questionlist")
 });
 
 router.post("/questiondelete", (req, res, next) => {

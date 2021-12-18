@@ -1,10 +1,12 @@
 extends ../../layouts/main.pug
 
 block content 
-    div 
-        label(htmlFor="title") TITLE 
-        input(type="text" name="title" id="title" required)
-    div 
-        label(htmlFor="content") CONTENT 
-        input(type="text" name="content" id="content" required)
-    input(type="submit" name="id" value="Update")
+    form(action="/board/questionupdate" method="POST") 
+        div 
+            label(htmlFor="title") TITLE 
+            input(type="text" name="title" id="title" required)
+        div 
+            label(htmlFor="content") CONTENT 
+            input(type="text" name="content" id="content" required)
+
+        input(type="submit" name="id" value="Update")
