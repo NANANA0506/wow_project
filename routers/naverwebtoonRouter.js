@@ -1,10 +1,21 @@
 const express = require("express");
 const router = require("./globalRouter");
 
-router.get("/naverwebtoons", (req,res)=>{
-    res.render("naverWebtoonWriter/NWallpage");
+router.get("/naverwebtoon", (req,res)=>{
+    res.render("naverWebtoonWriter/NWwriter");
 });
 
+router.get("/naverendwebtoon", (req,res)=>{
+    res.render("naverWebtoonEndwebtoons/NWendwebtoon")
+})
+
+router.get("/naverwebtoonweekday", (req,res)=>{
+    res.render("naverWebtoonWeekdays/NWweekday")
+})
+
+router.get("/naverwebtoonproduct", (req,res)=>{
+    res.render("naverWebtoonProduct/NWproducts")
+})
 
 router.get("/nwpage1", (req,res)=>{
     res.render("naverWebtoonWriter/NWpage1")
