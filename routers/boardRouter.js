@@ -46,6 +46,7 @@ router.get("/questiondetail", checkLogin, (req, res, next) => {
 
     try {
         db.query(detailQuery, (err, rows) => {
+
             res.render("screens/board/questiondetail", { loggedIn, bData: rows[0] });
         });
     } catch (error) {
@@ -91,49 +92,51 @@ router.post("/questioncreate", (req, res, next) => {
     };
 }); 
 
-router.get("questionupdate", (req, res, next) => {
+router.get("/questionupdate", (req, res, next) => {
     res.render("screens/board/questionupdate");
 });
 
-router.post("/questionupdate/:updateId", (req, res, next) => {
-    
+router.post("/questionupdate", (req, res, next) => {
+    const {bDataid, bDatatitle, bDatacontent} = req.body;
+
     try {
         updateQuery = `
         UPDATE boards
-           SET title = ${req.body.title},
-               content = ${req.body.content}
-         WHERE id = ${boardId}
+           SET title = "${req.body.title}",
+               content = "${req.body.content}",
+               updatedAt = now()
+         WHERE id = ${req.body.bDataid}
     `;
-    conn.query(updateQuery, (error, result) => {
+    db.query(updateQuery, (error, result) => {
         if(error){
+            console.error(error);
             return res.status(400).send("게시글을 수정중 에러 발생 !");
         }
     });
-    res.redirect("screens/board/question");
     } catch (error) {
-      console.error(error)
+      console.error(error);
       res.status(400).send("게시글을 수정할 수 없습니다.")
     }
 });
 
-router.post("/delete", (req, res, next) => {
+router.post("/questiondelete", (req, res, next) => {
 
-    const {boardId} =req.body;
+    const {bDataId} = req.body;
 
     try {
         const deleteQuery = `
             DELETE FROM boards
-             WHERE id = ${boardId}
+             WHERE id = ${bDataId}
         `;
-        conn.query(deleteQuery, (error, result) => {
+        db.query(deleteQuery, (error, bData) => {
             if(error){
-                console.error(error)
+                console.error(error);
                 return res.status(400).send("삭제 중 에러 발생!");
             }
-            res.redirect("screens/board/question");
+            res.redirect("/board/questionlist");
         });
     } catch (error) {
-        console.error(error)
+        console.error(error);
         return res.status(400).send("삭제에 실페했습니다.");
     }
 });

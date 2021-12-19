@@ -18,7 +18,7 @@ router.get("/eventlist", checkLogin, (req, res, next) => {
     `;
   const loggedIn = req.session.isLoggedIn;
   try {
-    console.log(b);
+
     db.query(selectQuery, (err, rows) => {
       return res.render("screens/event/eventlist", {
         loggedIn,
@@ -64,7 +64,6 @@ router.get("/eventcreate", checkLogin, (req, res, next) => {
 });
 
 router.post("/eventcreate", (req, res, next) => {
-
   const createQuery = `
     INSERT  INTO events (
         title,

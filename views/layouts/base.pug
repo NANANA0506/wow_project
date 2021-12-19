@@ -10,26 +10,28 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nanum+Myeongjo&family=PT+Mono&display=swap" rel="stylesheet")
+        link(rel="shortcut icon" href="http://www.yoursite.com/favicon.ico?v=2") 
     body
-        div.header 
-            ul.menus
-                li.header__col2  
+        div.baseheader 
+            ul 
+                li 
                     a(href="/")
                         p home 
                 if loggedIn 
-                    li.menus__item
+                    li
                         a(href="/logout") logout    
                 else    
-                    li.menus__item
+                    li
                         a(href="/signin") signin
-                    li.menus__item
-                        a(href="/termsofuse") signup 
+                    li
+                        a(href="/termsofuse") signup
+        .top              
         section.wholeWrapper 
             section.XX__left 
             section.rsWrapper
                 block content
             section.XX__right 
-        footer.footer
+        div.footer
             .footer__col1
                 .footer__col1__sec1
                     img(src="img/title.png")
