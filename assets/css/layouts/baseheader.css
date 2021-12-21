@@ -1,0 +1,26 @@
+.baseheader {
+  width: 100%;
+  height: 80px;
+  position: sticky;
+
+  top: 0px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  opacity: 10;
+
+  backdrop-filter: blur(10px);
+  z-index: 10;
+
+  /*background-color: #fff;*/
+
+  padding: 0px 25px;
+}
+
+.baseheader__col1 {
+    width: 10%;
+    font-size: 22px;
+    font-family: 'Dancing Script', cursive;
+}
