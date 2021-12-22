@@ -14,24 +14,90 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Love+Light&family=Mukta&family=Nanum+Myeongjo&family=Oooh+Baby&family=PT+Serif&family=Waterfall&display=swap" rel="stylesheet")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)       
+        link(href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Love+Light&family=Mukta&family=Nanum+Myeongjo&family=Oooh+Baby&family=PT+Serif&family=Roboto:wght@400;500&family=Secular+One&family=Waterfall&display=swap" rel="stylesheet")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Love+Light&family=Manrope&family=Mukta&family=Nanum+Myeongjo&family=Oooh+Baby&family=PT+Serif&family=Roboto:wght@400;500&family=Secular+One&family=Waterfall&display=swap" rel="stylesheet")
     body
         div.baseheader 
             .baseheader__col1
                 a(href="/") 
                     p weofwebtoon
             .baseheader__col2  
-                a(href="/") 
-                    p Board 
-                a(href="/")     
-                    p Webtoon
-                a(href="/")      
-                    p Novel
-                a(href="/")             
-                    p Suggestion
-                a(href="/")     
-                    p Development
-                a(href="/")     
-                    p Help    
+                .baseheader__col2__sec.devMenu Board 
+                    .subBox
+                        h2 
+                            a(href="/") event
+                        h2
+                            a(href="#")  fqa
+                        h2
+                            a(href="#") q&a
+                        h2
+                            a(href="#")  free
+                        h2
+                            a(href="#")  question
+                        h2
+                            a(href="#")  notice     
+                .baseheader__col2__sec.devMenu Webtoon
+                    .subBox
+                        h2 
+                            a(href="/") event
+                        h2
+                            a(href="#")  fqa
+                        h2
+                            a(href="#") q&a
+                        h2
+                            a(href="#")  free
+                        h2
+                            a(href="#")  question
+                        h2
+                            a(href="#")  notice     
+                .baseheader__col2__sec.devMenu Novel
+                    .subBox
+                        h2 
+                            a(href="/") event
+                        h2
+                            a(href="#")  fqa
+                        h2
+                            a(href="#") q&a
+                        h2
+                            a(href="#")  free
+                        h2
+                            a(href="#")  question
+                        h2
+                            a(href="#")  notice     
+                .baseheader__col2__sec.devMenu Suggestion
+                    .subBox
+                        h2 
+                            a(href="/") event
+                        h2
+                            a(href="#")  fqa
+                        h2
+                            a(href="#") q&a
+                        h2
+                            a(href="#")  free
+                        h2
+                            a(href="#")  question
+                        h2
+                            a(href="#")  notice     
+                .baseheader__col2__sec.devMenu Development
+                    .subBox
+                        h2 
+                            a(href="/") event
+                        h2
+                            a(href="#")  fqa
+                        h2
+                            a(href="#") q&a
+                        h2
+                            a(href="#")  free
+                        h2
+                            a(href="#")  question
+                        h2
+                            a(href="#")  notice  
+                a(href="/")               
+                    .baseheader__col2__sec.devMenu  Help    
             .baseheader__col3
                 ul 
                     if loggedIn 
@@ -39,13 +105,13 @@ html(lang="en")
                             a(href="/logout") 
                                 p logout    
                     else    
-                        li
+                        li.baseheader__col3__sec
                             a(href="/signin") 
-                                p Signin 
+                                p Sign in 
                         p /        
-                        li
+                        li.baseheader__col3__sec
                             a(href="/termsofuse") 
-                                p Signup              
+                                p Sign up              
         section.wholeWrapper 
             section.XX__left 
             section.rsWrapper
