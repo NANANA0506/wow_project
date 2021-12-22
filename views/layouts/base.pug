@@ -20,11 +20,18 @@ html(lang="en")
                 a(href="/") 
                     p weofwebtoon
             .baseheader__col2  
-                p board 
-                p webtoon 
-                p novel
-                p suggestion
-                p development
+                a(href="/") 
+                    p Board 
+                a(href="/")     
+                    p Webtoon
+                a(href="/")      
+                    p Novel
+                a(href="/")             
+                    p Suggestion
+                a(href="/")     
+                    p Development
+                a(href="/")     
+                    p Help    
             .baseheader__col3
                 ul 
                     if loggedIn 
@@ -34,10 +41,11 @@ html(lang="en")
                     else    
                         li
                             a(href="/signin") 
-                                p signin
+                                p Signin 
+                        p /        
                         li
                             a(href="/termsofuse") 
-                                p signup              
+                                p Signup              
         section.wholeWrapper 
             section.XX__left 
             section.rsWrapper

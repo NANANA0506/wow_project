@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+
   opacity: 10;
 
   backdrop-filter: blur(10px);
@@ -20,7 +20,44 @@
 }
 
 .baseheader__col1 {
-    width: 10%;
-    font-size: 22px;
-    font-family: 'Dancing Script', cursive;
+  width: 10%;
+  font-size: 22px;
+  font-family: "Dancing Script", cursive;
 }
+
+.baseheader__col2 {
+  width: 65%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.baseheader__col2 p {
+  font-size: 15px;
+  margin: 0px 15px;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+}
+
+.baseheader__col3 {
+  width: 25%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.baseheader__col3 ul{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+
+  font-family: 'Roboto', sans-serif;
+} 
