@@ -18,7 +18,7 @@
 }
 
 .naverwebtoon_header .naverwebtoon_header__weekdays .naverwebtoon_header__weekdays__font{
-    width: 20%;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -33,7 +33,7 @@
     justify-content: center;
 }
 .naverwebtoon_header .naverwebtoon_header__endwebtoons .naverwebtoon_header__endwebtoons__font{
-    width: 20%;
+    width: 100%;
     cursor: pointer;
 }
 .naverwebtoon_header .naverwebtoon_header__webtoons{
@@ -47,7 +47,7 @@
     justify-content: center;
 }
 .naverwebtoon_header .naverwebtoon_header__webtoons .naverwebtoon_header__webtoons__font{
-    width: 20%;
+    width: 100%;
     cursor: pointer;
 }
 .naverwebtoon_header .naverwebtoon_header__writers{
@@ -64,7 +64,7 @@
 }
 .naverwebtoon_header .naverwebtoon_header__writers .naverwebtoon_header__writers__font{
     color: blue;
-    width: 20%;
+    width: 100%;
     cursor: pointer;
 }
 .writerlist ul {

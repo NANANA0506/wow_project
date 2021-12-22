@@ -8,10 +8,6 @@
 @import "../css/screens/signup.css";
 @import "../css/screens/finished.css";
 @import "../css/screens/signup.css";
-@import "../css/screens/naverWebtoonWriter.css";
-@import "../css/screens/naverWebtoonweekdays.css";
-@import "../css/screens/naverWebtoonendwebtoons.css";
-@import "../css/screens/naverWebtoonproducts.css";
 @import "../css/screens/help.css";
 @import "../css/screens/header.css";
 @import "../css/screens/termsofuse.css";
@@ -21,3 +17,13 @@
 @import "../css/layouts/mainheader.css";
 @import "../css/layouts/mainfooter.css";
 @import "../css/layouts/layout.css";
+@import "../css/naverwebtoonendwebtoons/naverWebtoonendwebtoons.css";
+@import "../css/naverwebtoonwriter/naverWebtoonWriter.css";
+@import "../css/naverwebtoonweekdays/naverWebtoonweekdays.css";
+@import "../css/naverwebtoonweekdays/navermondaywebtoons.css";
+@import "../css/naverwebtoonproducts/naverWebtoonproducts.css";
+
+
+
+
+

@@ -5,13 +5,41 @@
     display: flex;
     flex-direction: row;
 }
-
-.naverwebtoon_header .nwheader__weekdays{
+.naverwebtoon_header .nwheader_weekday{
     width: 25%;
     height: 70px;
 
-    color: blue;
+    border-bottom: 3px solid grey;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.naverwebtoon_header .nwheader_weekday .nwheader_weekday__font{
+    width: 100%;
+    cursor: pointer;
+}
+
+.naverwebtoon_header .nwheader_endwebtoon{
+    width: 25%;
+    height: 70px;
+    border-bottom: 3px solid grey;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.naverwebtoon_header .nwheader_endwebtoon .nwheader_endwebtoon__font{
+    width: 100%;
+    cursor: pointer;
+
+}
+.naverwebtoon_header .nwheader_webtoon{
+    width: 25%;
+    height: 70px;
     border-bottom: 3px solid blue;
 
     display: flex;
@@ -19,43 +47,12 @@
     align-items: center;
     justify-content: center;
 }
-
-
-
-.naverwebtoon_header .nwheader__weekdays .nwheader__weekdays__font{
-    width: 20%;
+.naverwebtoon_header .nwheader_webtoon .nwheader_webtoon__font{
+    width: 100%;
     cursor: pointer;
+    color: blue;
 }
-
-.naverwebtoon_header .nwheader__endwebtoons{
-    width: 25%;
-    height: 70px;
-    border-bottom: 3px solid grey;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.naverwebtoon_header .nwheader__endwebtoons .nwheader__endwebtoons__font{
-    width: 20%;
-    cursor: pointer;
-}
-.naverwebtoon_header .nwheader__webtoons{
-    width: 25%;
-    height: 70px;
-    border-bottom: 3px solid grey;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.naverwebtoon_header .nwheader__webtoons .nwheader__webtoons__font{
-    width: 20%;
-    cursor: pointer;
-}
-.naverwebtoon_header .nwheader__writers{
+.naverwebtoon_header .nwheader_writer{
     width: 25%;
     height: 70px;
 
@@ -68,8 +65,8 @@
 
 
 }
-.naverwebtoon_header .nwheader__writers .nwheader__writers__font{
-    width: 20%;
+.naverwebtoon_header .nwheader_writer .nwheader_writer__font{
+    width: 100%;
     cursor: pointer;
 }
 
