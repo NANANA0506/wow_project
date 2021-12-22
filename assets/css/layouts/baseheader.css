@@ -48,13 +48,20 @@
   height: 100%;
   cursor: pointer;
   font-family: "Manrope", sans-serif;
-  transition: 0.5;
+  font-weight: 1000;
+  transition: 0.1;
+}
+
+.devMenu:hover {
+  color: #444;
+  transition: 0.1;
 }
 
 .devMenu:hover .subBox {
   display: block;
 
   background-color: #fff;
+
 }
 
 .subBox {
@@ -62,12 +69,13 @@
   position: absolute;
 
   width: 600px;
-  height: 100px;
+  height: 350px;
 
-  margin: 130px 10px 0px 0px;
+  margin: 390px 0px 0px 0px;
 
-  border: 1px solid#777;
   border-radius: 8px;
+  box-shadow: 1.5px 1.5px 25px rgb(182, 182, 182);
+
   background-color: #fff;
 }
 
