@@ -1,11 +1,12 @@
 extends ../../layouts/main.pug
 
 block content
-    div
-        label(htmlFor="title") TITLE 
-        input(type="text" name="bDatatitle" id="title" required)
-    div 
-        label(htmlFor="content") CONTENT 
-        input(type="text" name="bDatacontent" id="content" required)
     form(action="/board/questionupdate" method="POST") 
-        input(type="submit", value="수정하기")
+
+        div
+            label(htmlFor="title") TITLE 
+            input(type="text" name="bDatatitle" id="title" required)
+        div 
+            label(htmlFor="content") CONTENT 
+            input(type="text" name="bDatacontent" id="content" required)
+        input(type="submit" name="bDataId" value="수정하기")
