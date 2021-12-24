@@ -28,18 +28,26 @@ html(lang="en")
             .baseheader__col2  
                 .baseheader__col2__sec.devMenu Board 
                     .subBox
-                        h2 
-                            a(href="/") event
-                        h2
-                            a(href="#")  fqa
-                        h2
-                            a(href="#") q&a
-                        h2
-                            a(href="#")  free
-                        h2
-                            a(href="#")  question
-                        h2
-                            a(href="#")  notice     
+                        .subBox__col1 
+                            i.fas.fa-calendar-alt
+                            a(href="/") 
+                                h2 event
+                        .subBox__col2
+                            a(href="#")  
+                                h2 fqa
+                        .subBox__col3
+                            a(href="#") 
+                                h2 q&a
+                        .subBox__col4
+                            i.fas.fa-calendar
+                            a(href="#")  
+                                h2 free
+                        .subBox__col5  
+                            a(href="#")  
+                                h2 question
+                        .subBox__col6   
+                            a(href="#")  
+                                h2 notice     
                 .baseheader__col2__sec.devMenu Webtoon
                     .subBox
                         h2 
@@ -100,6 +108,7 @@ html(lang="en")
                     .baseheader__col2__sec.devMenu  Help    
             .baseheader__col3
                 ul 
+                    i.fas.fa-search
                     if loggedIn 
                         li
                             a(href="/logout") 
@@ -111,7 +120,9 @@ html(lang="en")
                         p /        
                         li.baseheader__col3__sec
                             a(href="/termsofuse") 
-                                p Sign up              
+                                p Sign up   
+            .baseheader__col4   
+                button webtoon create                               
         section.wholeWrapper 
             section.XX__left 
             section.rsWrapper
