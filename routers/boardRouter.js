@@ -108,7 +108,7 @@ router.post("/questionupdate", (req, res, next) => {
                SET title = "${bDatatitle}",
                    content = "${bDatacontent}",
                    updatedAt = now()
-             WHERE id = ${bDataId}
+             WHERE id =  ${bDataId}
     `;
     db.query(updateQuery, (error, result) => {
         if(error){
