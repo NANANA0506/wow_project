@@ -57,7 +57,13 @@
   transition: 0.1;
 }
 
-.devMenu:hover .subBox {
+.devMenu:hover .subBox1 {
+  display: block;
+
+  background-color: #fff;
+}
+
+.devMenu:hover .subBox2 {
   display: block;
 
   background-color: #fff;
@@ -65,37 +71,277 @@
   padding: 10px;
 }
 
-.subBox {
+.subBox1 {
   display: none;
   position: absolute;
 
-  width: 380px;
+  width: 580px;
+  height: 380px;
+
+  margin: 440px 0px 0px 0px;
+
+  border-radius: 8px;
+  box-shadow: 1.5px 1.5px 15px rgb(182, 182, 182);
+
+  background-color: #fff;
+}
+
+.subBox2 {
+  display: none;
+  position: absolute;
+
+  width: 350px;
   height: 500px;
 
   margin: 540px 0px 0px 0px;
 
   border-radius: 8px;
-  box-shadow: 1.5px 1.5px 25px rgb(182, 182, 182);
+  box-shadow: 1.5px 1.5px 15px rgb(182, 182, 182);
 
   background-color: #fff;
 }
 
-.subBox__col1, 
-.subBox__col2,
-.subBox__col3, 
-.subBox__col4,
-.subBox__col5,
-.subBox__col6 {
+.subBox1__col {
   width: 100%;
-  height: 16.666666666666668%;
+  height: 100%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.subBox1__col__sce1 {
+  width: 65%;
+  height: 100%;
+  padding: 20px;
+}
+
+.subBox1__col__sce1__box1,
+.subBox1__col__sce1__box2,
+.subBox1__col__sce1__box3,
+.subBox1__col__sce1__box4 {
+  width: 290px;
+  height: 20%;
+
+  margin: 0px 20px;
+
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-}  
+}
 
-.subBox:hover {
+.subBox1__col__sce1__box1__icon,
+.subBox1__col__sce1__box2__icon,
+.subBox1__col__sce1__box3__icon,
+.subBox1__col__sce1__box4__icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(245, 245, 245);
+}
+
+.subBox1__col__sce1__box1__icon i {
+  color: #cba1db;
+}
+
+.subBox1__col__sce1__box2__icon i {
+  color: #f0aaaa;
+}
+
+.subBox1__col__sce1__box3__icon i {
+  color: #aaf0aa;
+}
+
+.subBox1__col__sce1__box4__icon i {
+  color: #ece79a;
+}
+
+.subBox1__col__sce1__box1__text,
+.subBox1__col__sce1__box2__text,
+.subBox1__col__sce1__box3__text,
+.subBox1__col__sce1__box4__text {
+  width: 80%;
+  height: 50px;
+  margin: 20px 10px 0px;
+}
+
+.subBox1__col__sce2 {
+  width: 35%;
+  height: 100%;
+  background-color: rgb(228, 227, 227);
+  border-radius: 8px;
+}
+
+.subBox2__col1,
+.subBox2__col2,
+.subBox2__col3,
+.subBox2__col4,
+.subBox2__col5,
+.subBox2__col6 {
+  width: 290px;
+  height: 16.666666666666668%;
+
+  margin: 0px 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.subBox2__col4 {
+  border-bottom: 1px solid rgb(216, 215, 215);
+}
+
+.subBox2__col1__icon,
+.subBox2__col2__icon,
+.subBox2__col3__icon,
+.subBox2__col4__icon,
+.subBox2__col5__icon,
+.subBox2__col6__icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(245, 245, 245);
+}
+
+.subBox2__col1__icon:hover,
+.subBox2__col2__icon:hover,
+.subBox2__col3__icon:hover,
+.subBox2__col4__icon:hover,
+.subBox2__col5__icon:hover,
+.subBox2__col6__icon:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.subBox2__col1__icon i,
+.subBox2__col2__icon i,
+.subBox2__col3__icon i,
+.subBox2__col4__icon i,
+.subBox2__col5__icon i,
+.subBox2__col6__icon i {
+  font-size: 20px;
+}
+
+.subBox2__col1__icon i {
+  color: #cba1db;
+}
+
+.subBox2__col2__icon i {
+  color: #f0aaaa;
+}
+
+.subBox2__col3__icon i {
+  color: #aaf0aa;
+}
+
+.subBox2__col4__icon i {
+  color: #ece79a;
+}
+
+.subBox2__col5__icon i {
+  color: #cba1db;
+}
+
+.subBox2__col6__icon i {
+  color: #f0aaaa;
+}
+
+.subBox2__col1__icon i:hover {
+  font-size: 22px;
+  color: #c672e7;
+}
+
+.subBox2__col2__icon i:hover {
+  font-size: 22px;
+  color: #eb8181;
+}
+
+.subBox2__col3__icon i:hover {
+  font-size: 22px;
+  color: #76eb76;
+}
+
+.subBox2__col4__icon i:hover {
+  font-size: 22px;
+  color: #eee679;
+}
+
+.subBox2__col5__icon i:hover {
+  font-size: 22px;
+  color: #c672e7;
+}
+
+.subBox2__col6__icon i:hover {
+  font-size: 22px;
+  color: #f0aaaa;
+}
+
+.subBox2__col1__text,
+.subBox2__col2__text,
+.subBox2__col3__text,
+.subBox2__col4__text,
+.subBox2__col5__text,
+.subBox2__col6__text {
+  width: 80%;
+  height: 50px;
+  margin: 20px 10px 0px;
+}
+
+.subBox2__col1__text h2,
+.subBox2__col2__text h2,
+.subBox2__col3__text h2,
+.subBox2__col4__text h2,
+.subBox2__col5__text h2,
+.subBox2__col6__text h2 {
+  font-size: 15px;
+  font-weight: 1000;
+}
+
+.subBox2__col1__text h2:hover,
+.subBox2__col2__text h2:hover,
+.subBox2__col3__text h2:hover,
+.subBox2__col4__text h2:hover,
+.subBox2__col5__text h2:hover,
+.subBox2__col6__text h2:hover {
+  font-size: 16px;
+  color: #222;
+}
+
+.subBox2__col1__text p,
+.subBox2__col2__text p,
+.subBox2__col3__text p,
+.subBox2__col4__text p,
+.subBox2__col5__text p,
+.subBox2__col6__text p {
+  padding-top: 5px;
+
+  font-size: 11px;
+  color: #777;
+}
+
+.subBox2__col1__text p:hover,
+.subBox2__col2__text p:hover,
+.subBox2__col3__text p:hover,
+.subBox2__col4__text p:hover,
+.subBox2__col5__text p:hover,
+.subBox2__col6__text p:hover {
+  font-size: 12px;
+  color: #222;
+}
+
+
+.subBox2:hover {
   display: block;
 }
 
