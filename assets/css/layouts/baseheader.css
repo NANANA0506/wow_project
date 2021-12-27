@@ -14,7 +14,7 @@
   backdrop-filter: blur(10px);
   z-index: 10;
 
-  /*background-color: #fff;*/
+  box-shadow: 0.5px 0.5px 2px rgb(219, 219, 219);
 
   padding: 0px 25px;
 }
@@ -502,6 +502,25 @@
   font-size: 15px;
 
   font-family: "Roboto", sans-serif;
+}
+
+.baseheader__col3__logout {
+  margin-left: 50px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100%;
+  background-color: rgb(241, 237, 237);
+}
+
+.baseheader__col3__logout i {
+  font-size: 23px;
 }
 
 .baseheader__col3__sec p {

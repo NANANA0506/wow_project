@@ -102,7 +102,7 @@ router.post("/signup", (req, res, next) => {
 });
 
 router.get("/user", (req, res, next) => {
-  res.render("layouts/user");
+  res.render("screens/user");
 });
 
 router.get("/logout", (req, res, next) => {
