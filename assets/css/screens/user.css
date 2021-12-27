@@ -1,26 +1,38 @@
 .userBox {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .userBox__col1 {
-    width: 100%;
-    height: 38%;
-    background-color: aquamarine;
+  width: 100%;
+  height: 40%;
+  background-color: aquamarine;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userBox__col1__sec {
+  width: 40%;
+  height: 100%;
+  background-color: black;
 }
 
 .userBox__col2 {
-    width: 100%;
-    height: 12%;
-    background-color: aqua;
+  width: 100%;
+  height: 10%;
+  background-color: aqua;
+
+  border-bottom: 1px solid rgb(207, 206, 206);
 }
 
-
 .userBox__col3 {
-    width: 100%;
-    height: 50%;
-    background-color: bisque;
+  width: 100%;
+  height: 50%;
+  background-color: bisque;
 }
