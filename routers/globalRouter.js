@@ -101,6 +101,10 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
+router.get("/user", (req, res, next) => {
+  res.render("layouts/user");
+});
+
 router.get("/logout", (req, res, next) => {
   req.session.isLoggedIn = false;
   req.session.userId = null;

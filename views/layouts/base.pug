@@ -34,28 +34,28 @@ html(lang="en")
                             .subBox1__col__sce1
                                 .subBox1__col__sce1__box1
                                     .subBox1__col__sce1__box1__icon
-                                        i.fas.fa-book
+                                        i.fas.fa-align-left
                                     .subBox1__col__sce1__box1__text 
                                         a(href="/") 
                                             h2 kakao webtoon
                                             p Lorem ipsum dolor sit amet.... 
                                 .subBox1__col__sce1__box2            
                                     .subBox1__col__sce1__box2__icon
-                                        i.fas.fa-book
+                                        i.fas.fa-align-center
                                     .subBox1__col__sce1__box2__text         
                                         a(href="#")
                                             h2 naver webtoon
                                             p Lorem ipsum dolor sit amet....
                                 .subBox1__col__sce1__box3             
                                     .subBox1__col__sce1__box3__icon
-                                        i.fas.fa-book
+                                        i.fas.fa-align-left
                                     .subBox1__col__sce1__box3__text     
                                         a(href="#") 
                                             h2 by day of the week
                                             p Lorem ipsum dolor sit amet.... 
                                 .subBox1__col__sce1__box4             
                                     .subBox1__col__sce1__box4__icon
-                                        i.fas.fa-book
+                                        i.fas.fa-align-right
                                     .subBox1__col__sce1__box4__text     
                                         a(href="#")  
                                             h2 finished
@@ -207,9 +207,9 @@ html(lang="en")
                 ul 
                     i.fas.fa-search
                     if loggedIn 
-                        li
-                            a(href="/logout") 
-                                p logout    
+                        li.baseheader__col3__logout
+                            a(href="/user") 
+                               i.fas.fa-user
                     else    
                         li.baseheader__col3__sec
                             a(href="/signin") 
