@@ -259,6 +259,25 @@
   height: 100%;
   background-color: rgb(228, 227, 227);
   border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+.subBox1__col__sce2 h1{
+  font-size: 15px;
+  color: #222;
+
+  margin: 20px 0px 0px; 
+}
+
+.subBox1__col__sce2 p{
+  font-size: 13px;
+  color: #555;
+
+  margin: 15px 0px 0px;
 }
 
 .subBox2__col1,
