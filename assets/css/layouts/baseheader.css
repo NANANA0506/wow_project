@@ -515,12 +515,30 @@
   flex-direction: row;
 } 
 
-.baseheader__col3__logout1 input {
+.baseheader__col3__logout1__box {
   width: 120px;
   height: 40px;
 
   background: none;
   border: none;
+
+  display: flex;
+  flex-direction: row;
+
+  border-radius: 8px;
+
+  background-color: rgb(245, 243, 243);
+}
+
+.baseheader__col3__logout1__box input{
+  width: 120px;
+  height: 40px;
+
+  background: none;
+  border: none;
+
+  display: flex;
+  flex-direction: row;
 
   border-radius: 8px;
 
