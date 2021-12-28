@@ -106,6 +106,11 @@ router.get("/user", checkLogin, (req, res, next) => {
   res.render("screens/user", {loggedIn});
 });
 
+router.get("/profile", checkLogin, (req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/profile", {loggedIn});
+});
+
 router.get("/logout", (req, res, next) => {
   req.session.isLoggedIn = false;
   req.session.userId = null;
