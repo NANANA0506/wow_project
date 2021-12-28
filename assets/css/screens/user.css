@@ -125,30 +125,13 @@
   gap: 40px 40px;
 }
 
-.userBox__col3__sec2__box1 {
-  width: 400px;
-  height: 300px;
-
-  background-color: rgb(27, 77, 77);
-
-  border-radius: 8px;
-}
-
-.userBox__col3__sec2__box2 {
-  width: 400px;
-  height: 300px;
-
-  background-color: rgb(94, 221, 221);
-
-  border-radius: 8px;
-}
-
+.userBox__col3__sec2__box1,
+.userBox__col3__sec2__box2,
 .userBox__col3__sec2__box3 {
   width: 400px;
   height: 300px;
 
-  background-color: rgb(39, 224, 224);
+  background: linear-gradient(rgb(233, 231, 231), #fff);
 
   border-radius: 8px;
 }
-
