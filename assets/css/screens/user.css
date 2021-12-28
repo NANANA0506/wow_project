@@ -1,6 +1,6 @@
 .userBox {
   width: 100%;
-  height: 100vh;
+  height: 160vh;
 
   display: flex;
   flex-direction: column;
@@ -8,24 +8,58 @@
 
 .userBox__col1 {
   width: 100%;
-  height: 40%;
+  height: 40vh;
   background-color: aquamarine;
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
-.userBox__col1__sec {
-  width: 40%;
+.userBox__col1__sec{
+  width: 700px;
   height: 100%;
+  background-color: rgb(218, 18, 18);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.userBox__col1__sec__icon {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 100%;
   background-color: black;
+}
+
+.userBox__col1__sec__text {
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 40px;
+}
+
+.userBox__col1__sec__text h1 {
+ font-size: 32px;
+ font-family: 'Roboto', sans-serif;
+
+ margin: 10px 0px 10px;
+}
+
+.userBox__col1__sec__text  {
+  font-size: 16px;
 }
 
 .userBox__col2 {
   width: 100%;
-  height: 10%;
+  height: 10vh;
   background-color: aqua;
 
   border-bottom: 1px solid rgb(207, 206, 206);
@@ -33,6 +67,47 @@
 
 .userBox__col3 {
   width: 100%;
-  height: 50%;
+  height: 110vh;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.userBox__col3__sec1 {
+  width: 100%;
+  height: 55vh;
+  background-color: rgb(82, 61, 35);
+  
+  display: flex;
+  flex-direction: row;
+}
+
+.userBox__col3__sec1__box1 {
+  width: 400px;
+  height: 300px;
+
+  background-color: aqua;
+}
+
+.userBox__col3__sec1__box2 {
+  width: 400px;
+  height: 300px;
+
+  background-color: aqua;
+}
+
+.userBox__col3__sec1__box3 {
+  width: 400px;
+  height: 300px;
+
+  background-color: aqua;
+}
+
+.userBox__col3__sec2 {
+  width: 100%;
+  height: 55vh;
   background-color: bisque;
+  
+  display: flex;
+  flex-direction: row;
 }
