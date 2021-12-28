@@ -101,8 +101,9 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
-router.get("/user", (req, res, next) => {
-  res.render("screens/user");
+router.get("/user", checkLogin, (req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/user", {loggedIn});
 });
 
 router.get("/logout", (req, res, next) => {

@@ -1,6 +1,6 @@
 .userBox {
   width: 100%;
-  height: 120vh;
+  height: 125vh;
 
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
 
 .userBox__col1 {
   width: 100%;
-  height: 30vh;
+  height: 25vh;
 
   display: flex;
   flex-direction: row;
@@ -62,11 +62,22 @@
   height: 10vh;
 
   border-bottom: 1px solid rgb(207, 206, 206);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userBox__col2 p {
+  font-size: 16px;
+  color: #222;
+
+  margin: 0px 10px;
 }
 
 .userBox__col3 {
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   
   display: flex;
   flex-direction: column;
@@ -100,7 +111,7 @@
   width: 400px;
   height: 300px;
 
-  background-color: aqua;
+  border: 1px solid #999;
 
   border-radius: 8px;
 }

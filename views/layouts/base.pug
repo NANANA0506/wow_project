@@ -205,12 +205,14 @@ html(lang="en")
 
             .baseheader__col3
                 ul 
-                    i.fas.fa-search
                     if loggedIn 
-                        li.baseheader__col3__logout
+                        li.baseheader__col3__logout1
+                            input(type="text")
+                        li.baseheader__col3__logout2
                             a(href="/user") 
                                i.fas.fa-user
-                    else    
+                    else  
+                        i.fas.fa-search  
                         li.baseheader__col3__sec
                             a(href="/signin") 
                                 p Sign in 
