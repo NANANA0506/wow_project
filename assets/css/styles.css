@@ -17,6 +17,7 @@
 @import "../css/layouts/mainheader.css";
 @import "../css/layouts/mainfooter.css";
 @import "../css/layouts/layout.css";
+<<<<<<< HEAD
 @import "../css/naverwebtoonendwebtoons/naverWebtoonendwebtoons.css";
 @import "../css/naverwebtoonwriter/naverWebtoonWriter.css";
 @import "../css/naverwebtoonweekdays/naverWebtoonweekdays.css";
@@ -27,3 +28,7 @@
 
 
 
+=======
+@import "../css/screens/user.css";
+@import "../css/screens/profile.css";
+>>>>>>> refs/remotes/origin/master
