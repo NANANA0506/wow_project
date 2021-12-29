@@ -627,3 +627,16 @@
 .baseheader__col4 button:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+  .baseheader__col1 p {
+    font-size: 20px;
+  }
+  .baseheader__col2__sec.devMenu  {
+    opacity: 0;
+  }
+
+  .baseheader__col3__logout1__box {
+    
+  }
+}
