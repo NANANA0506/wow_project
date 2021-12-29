@@ -93,13 +93,15 @@ router.post("/questioncreate", (req, res, next) => {
 }); 
 
 router.get("/questionupdate", (req, res, next) => {
-    res.render("screens/board/questionupdate");
+    const {bDataId} = req.params;
+    console.log(bDataId);
+    res.render("screens/board/questionupdate", );
 });
 
 router.post("/questionupdate", (req, res, next) => {
-    const {bDataId} = req.body;
+    const {bDataid} = req.body;
     const {bDatatitle, bDatacontent} = req.body;
-    console.log(bDataId);
+    console.log(bDataid);
     console.log(bDatatitle);
     console.log(bDatacontent);
     try {
@@ -109,7 +111,7 @@ router.post("/questionupdate", (req, res, next) => {
                SET title = "${bDatatitle}",
                    content = "${bDatacontent}",
                    updatedAt = now()
-             WHERE id =  ${bDataId}
+             WHERE id =  ${bDataid}
     `;
     db.query(updateQuery, (error, bData) => {
         if(error){
@@ -121,7 +123,7 @@ router.post("/questionupdate", (req, res, next) => {
       console.error(error);
       res.status(400).send("게시글을 수정할 수 없습니다.")
     }
-    res.redirect("/")
+    res.redirect("/board/qustionlist")
 });
 
 router.post("/questiondelete", (req, res, next) => {
