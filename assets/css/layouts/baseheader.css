@@ -64,7 +64,8 @@
 }
 
 .devMenu:hover .subBox2,
-.devMenu:hover .subBox3 {
+.devMenu:hover .subBox3,
+.devMenu:hover .usersubBox {
   display: block;
 
   background-color: #fff;
@@ -110,6 +111,21 @@
   height: 400px;
 
   margin: 440px 0px 0px 0px;
+
+  border-radius: 8px;
+  box-shadow: 1.5px 1.5px 15px rgb(182, 182, 182);
+
+  background-color: #fff;
+}
+
+.usersubBox {
+  display: none;
+  position: absolute;
+
+  width: 280px;
+  height: 400px;
+
+  margin: 20px 0px 0px 0px;
 
   border-radius: 8px;
   box-shadow: 1.5px 1.5px 15px rgb(182, 182, 182);
@@ -636,7 +652,8 @@
     opacity: 0;
   }
 
-  .baseheader__col3__logout1__box {
-    
+  .baseheader__col3__logout1,
+  .baseheader__col3__logout2{
+    opacity: 0;
   }
 }
