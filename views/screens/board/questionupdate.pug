@@ -1,7 +1,7 @@
 extends ../../layouts/main.pug
 
 block content
-    form(action="/questionupdate" method="POST") 
+    form(action="/board/questionupdate", method="POST") 
 
         div
             label(htmlFor="title") TITLE 
@@ -9,4 +9,5 @@ block content
         div 
             label(htmlFor="content") CONTENT 
             input(type="text" name="bDatacontent" id="content" required)
-        input(type="submit" value="수정하기")
+            input(type="hidden" name="bDataId" value=)
+        input(type="submit", value="수정하기")

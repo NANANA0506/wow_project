@@ -111,7 +111,7 @@ router.post("/questionupdate", (req, res, next) => {
                    updatedAt = now()
              WHERE id =  ${bDataId}
     `;
-    db.query(updateQuery, (error, result) => {
+    db.query(updateQuery, (error, bData) => {
         if(error){
             console.error(error);
             return res.status(400).send("게시글을 수정중 에러 발생 !");
