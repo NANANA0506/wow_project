@@ -11,21 +11,41 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nanum+Myeongjo&family=PT+Mono&display=swap" rel="stylesheet")
         link(rel="shortcut icon" href="http://www.yoursite.com/favicon.ico?v=2") 
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Love+Light&family=Mukta&family=Nanum+Myeongjo&family=Oooh+Baby&family=PT+Serif&family=Waterfall&display=swap" rel="stylesheet")
     body
         div.baseheader 
-            ul 
-                li 
-                    a(href="/")
-                        p home 
-                if loggedIn 
-                    li
-                        a(href="/logout") logout    
-                else    
-                    li
-                        a(href="/signin") signin
-                    li
-                        a(href="/termsofuse") signup
-        .top              
+            .baseheader__col1
+                a(href="/") 
+                    p weofwebtoon
+            .baseheader__col2  
+                a(href="/") 
+                    p Board 
+                a(href="/")     
+                    p Webtoon
+                a(href="/")      
+                    p Novel
+                a(href="/")             
+                    p Suggestion
+                a(href="/")     
+                    p Development
+                a(href="/")     
+                    p Help    
+            .baseheader__col3
+                ul 
+                    if loggedIn 
+                        li
+                            a(href="/logout") 
+                                p logout    
+                    else    
+                        li
+                            a(href="/signin") 
+                                p Signin 
+                        p /        
+                        li
+                            a(href="/termsofuse") 
+                                p Signup              
         section.wholeWrapper 
             section.XX__left 
             section.rsWrapper
