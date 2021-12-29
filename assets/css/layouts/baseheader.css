@@ -125,13 +125,75 @@
   width: 230px;
   height: 400px;
 
-  margin: 20px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
 
   border-radius: 8px;
   box-shadow: 1.5px 1.5px 15px rgb(182, 182, 182);
 
   background-color: #fff;
 }
+
+.usersubBox__col {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 35px 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.usersubBox__col__sec1 {
+  width: 100%;
+  height: 10%;
+
+  border-bottom: 1px solid #999;
+}
+
+.usersubBox__col__sec1 p {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #666;
+}
+
+.usersubBox__col__sec2 {
+  width: 100%;
+  height: 45%;
+
+  border-bottom: 1px solid rgb(207, 206, 206);
+}
+
+.usersubBox__col__sec2 p {
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #666;
+}
+
+.usersubBox__col__sec3 {
+  width: 100%;
+  height: 45%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  padding-top: 15px;
+}
+
+.usersubBox__col__sec3 i {
+  font-size: 16px;
+  color: #666;
+}
+
+.usersubBox__col__sec3 p {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #666;
+}
+
 
 .subBox1__col {
   width: 100%;
