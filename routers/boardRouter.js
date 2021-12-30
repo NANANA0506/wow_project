@@ -48,7 +48,7 @@ router.get("/questiondetail", checkLogin, (req, res, next) => {
         db.query(detailQuery, (err, rows) => {
 
             res.render("screens/board/questiondetail", { loggedIn, bData: rows[0] });
-        });
+        }); 
     } catch (error) {
         console.error(error);
         return res.status(400).send("작성하는데 실패하셨습니다.");
@@ -94,14 +94,13 @@ router.post("/questioncreate", (req, res, next) => {
 
 router.get("/questionupdate", (req, res, next) => {
     const {bDataId} = req.params;
-    console.log(bDataId);
-    res.render("screens/board/questionupdate", );
+    res.render("/screens/board/questionupdate");
 });
 
 router.post("/questionupdate", (req, res, next) => {
-    const {bDataid} = req.body;
+    const {bDataId} = req.body;
     const {bDatatitle, bDatacontent} = req.body;
-    console.log(bDataid);
+    console.log(bDataId);
     console.log(bDatatitle);
     console.log(bDatacontent);
     try {
@@ -110,7 +109,7 @@ router.post("/questionupdate", (req, res, next) => {
                SET title = "${bDatatitle}",
                    content = "${bDatacontent}",
                    updatedAt = now()
-             WHERE id =  ${bDataid}
+             WHERE id =  ${bDataId}
     `;
     db.query(updateQuery, (error, bData) => {
         if(error){
