@@ -4,13 +4,13 @@ const checkLogin = require("../middlewares/checkLogin");
 
 const router = express.Router();
 
-router.get("/faqlist", checkLogin, (req, res, next) => {
+router.get("/fqalist", checkLogin, (req, res, next) => {
     const selectQuery = `
         SELECT  A.id,
                 A.title,
                 B.name,
                 A.createdAt
-          FROM  faq     A
+          FROM  fqa     A
          INNER
           JOIN  users   B
             ON  A.userId = B.id
@@ -19,7 +19,7 @@ router.get("/faqlist", checkLogin, (req, res, next) => {
     const loggedIn = req.session.isLoggedIn;
     try {
         db.query(selectQuery, (err, rows) => {
-            return res.render("screens/faq/faqlist", {  loggedIn, faqList: rows });
+            return res.render("screens/fqa/fqalist", {  loggedIn, faqList: rows });
     });
     } catch (error) {
         console.error(error);
@@ -27,7 +27,7 @@ router.get("/faqlist", checkLogin, (req, res, next) => {
     };
 });
 
-router.get("/faqdetail", checkLogin, (req, res, next) => {
+router.get("/fqadetail", checkLogin, (req, res, next) => {
 
     const detailQuery =`
         SELECT  A.id,
@@ -35,7 +35,7 @@ router.get("/faqdetail", checkLogin, (req, res, next) => {
                 A.content,
                 B.name,
                 A.createdAt
-          FROM  faq     A
+          FROM  fqa    A
          INNER  
           JOIN  users   B
             ON  A.userId = B.id
@@ -47,7 +47,7 @@ router.get("/faqdetail", checkLogin, (req, res, next) => {
     try {
         db.query(detailQuery, (err, rows) => {
 
-            res.render("screens/faq/faqdetail", { loggedIn, bData: rows[0] });
+            res.render("screens/fqa/fqadetail", { loggedIn, bData: rows[0] });
         });
     } catch (error) {
         console.error(error);
@@ -55,15 +55,15 @@ router.get("/faqdetail", checkLogin, (req, res, next) => {
     };
 });
 
-router.get("/faqcreate", checkLogin, (req, res, next) => {
+router.get("/fqacreate", checkLogin, (req, res, next) => {
     const loggedIn = req.session.isLoggedIn;
-    res.render("/screens/faq/faqcreate", {loggedIn});
+    res.render("/screens/fqa/fqacreate", {loggedIn});
 });
 
-router.post("/faqcreate", (req, res, next) => {
+router.post("/fqacreate", (req, res, next) => {
 
     const createQuery =`
-        INSERT  INTO    faq (
+        INSERT  INTO    fqa (
             title,
             content,
             createdAt,
@@ -79,12 +79,12 @@ router.post("/faqcreate", (req, res, next) => {
     `;
 
     try {
-        db.query(createQuery, (error, faq) => {
+        db.query(createQuery, (error, fqa) => {
             if(error){
                 console.error(error);
-                return res.redirect("faq/faqlist");
+                return res.redirect("fqa/fqalist");
             }
-        res.redirect("/faq/faqlist");
+        res.redirect("/fqa/fqalist");
         });
     } catch (error) {
         console.error(error);
@@ -92,16 +92,16 @@ router.post("/faqcreate", (req, res, next) => {
     };
 });
 
-router.get("/faqupdate", (req, res, next) => {
-    res.render("screens/faq/faqupdate");
+router.get("/fqaupdate", (req, res, next) => {
+    res.render("screens/fqa/fqaupdate");
 });
 
-router.post("/faqupdate", (req, res, next) => {
+router.post("/fqaupdate", (req, res, next) => {
     const{faqId} = req.body;
     const {faqtitle, faqcontent} = req.body;
 
     const updateQuery = `
-        UPDATE  faq
+        UPDATE  fqa
            SET  title = "${faqtitle}",
                 content = "${faqcontent}",
                 updatedAt = now()
@@ -121,12 +121,12 @@ router.post("/faqupdate", (req, res, next) => {
     res.redirect("/faq/faqlist");
 });
 
-router.post("/faqdelete", (req, res, next) => {
+router.post("/fqadelete", (req, res, next) => {
     const {faqId} = req.body;
 
     try {
         const deleteQuery =`
-            DELETE  FROM    faq
+            DELETE  FROM    fqa
              WHERE  id = ${faqId}
         `;
         db.query(deleteQuery, (error, faq) => {
@@ -134,7 +134,7 @@ router.post("/faqdelete", (req, res, next) => {
                 console.error(error);
                 return res.status(400).send("삭제 중 애러 발생!");
             }
-            res.redirect("/faq/faqlist");
+            res.redirect("/fqa/fqalist");
         });
     } catch (error) {
         console.error(error);
