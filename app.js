@@ -6,6 +6,7 @@ const globalRouter = require("./routers/globalRouter");
 const boardRouter = require("./routers/boardRouter");
 const webtoonRouter = require("./routers/webtoonRouter");
 const naverwebtoonRouter = require("./routers/naverwebtoonRouter");
+const faqRouter = require("./routers/faqRouter");
 const eventRouter = require("./routers/eventRouter");
 const freeRouter = require("./routers/freeRouter");
 const noticeRouter = require("./routers/noticeRouter");
@@ -34,6 +35,7 @@ app.use("/webtoon", webtoonRouter);
 app.use("/event", eventRouter);
 app.use("/free", freeRouter);
 app.use("/notice", noticeRouter);
+app.use("/faq", faqRouter);
 
 app.listen(PORT, () => {
   console.log(`🐾🐶http://localhost:${PORT} WOW✨ SERVER START🐰🥕`);
