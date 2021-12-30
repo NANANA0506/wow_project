@@ -10,6 +10,7 @@ const faqRouter = require("./routers/faqRouter");
 const eventRouter = require("./routers/eventRouter");
 const freeRouter = require("./routers/freeRouter");
 const noticeRouter = require("./routers/noticeRouter");
+const qnaRouter = require("./routers/qnaRouter");
 const path = require("path");
 const session = require("express-session");
 
@@ -36,6 +37,7 @@ app.use("/event", eventRouter);
 app.use("/free", freeRouter);
 app.use("/notice", noticeRouter);
 app.use("/faq", faqRouter);
+app.use("/qna", qnaRouter);
 
 app.listen(PORT, () => {
   console.log(`🐾🐶http://localhost:${PORT} WOW✨ SERVER START🐰🥕`);
