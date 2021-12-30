@@ -46,8 +46,7 @@ router.get("/eventdetail", checkLogin, (req, res, next) => {
     `;
 
   const loggedIn = req.session.isLoggedIn;
-  console.log(b);
-
+  
   try {
     db.query(detailQuery, (err, rows) => {
       res.render("screens/event/eventdetail", { loggedIn, bData: rows[0] });
