@@ -117,20 +117,13 @@ router.get("/logout", (req, res, next) => {
   return res.redirect("/");
 });
 
-router.get("/help", (req, res, next) => {
-  res.render("screens/help");
+router.get("/help", checkLogin, (req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/help", {loggedIn});
 });
 
 router.get("/partcipants", (req, res, next) => {
   res.render("screens/partcipants");
-});
-
-router.get("/notice", (req, res, next) => {
-  res.render("screens/notice");
-});
-
-router.get("/event", (req, res, next) => {
-  res.render("screens/event");
 });
 
 router.get("/termsofuse", (req, res, next) => {

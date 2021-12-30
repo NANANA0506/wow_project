@@ -1,4 +1,68 @@
 .profileeditBox {
-    width: 100%;
-    height: 150vh;
+  width: 100%;
+  height: 200vh;
+  background-color: aqua;
+
+  padding: 0px 80px;
+}
+
+.profileeditBox__col1 {
+  width: 100%;
+  height: 15%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:flex-end;
+
+  background-color: bisque;
+}
+
+.profileeditBox__col1__icon {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 100%;
+
+  background-color: #000;
+  margin-bottom: 15px;
+}
+
+.profileeditBox__col1__button1 button {
+  width: 160px;
+  height: 40px;
+
+  background-color: #222;
+  color: #fff;
+
+  border: none;
+  border-radius: 8px;
+
+  margin-left: 20px;
+  margin-bottom: 35px;
+}
+
+.profileeditBox__col1__button2 button {
+  width: 75px;
+  height: 40px;
+
+  background-color: rgb(233, 230, 230);
+  color: #222;
+
+  border: none;
+  border-radius: 8px;
+
+  margin-left: 10px;
+  margin-bottom: 35px;
+}
+
+.profileeditBox__col2 {
+  width: 100%;
+  height: 60%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: blue;
 }

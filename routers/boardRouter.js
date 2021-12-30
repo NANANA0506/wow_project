@@ -105,7 +105,6 @@ router.post("/questionupdate", (req, res, next) => {
     console.log(bDatatitle);
     console.log(bDatacontent);
     try {
-    
         const updateQuery = `
             UPDATE boards
                SET title = "${bDatatitle}",
