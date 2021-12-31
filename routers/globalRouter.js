@@ -127,4 +127,8 @@ router.get("/termsofuse", (req, res, next) => {
   res.render("screens/termsofuse");
 });
 
+router.get("/kakaoWeb", (req, res, next) => {
+  res.render("screens/kakaoWeb");
+});
+
 module.exports = router;
