@@ -7,7 +7,7 @@
 }
 
 .naverwebtoon_header .nwheader__weekday{
-    width: 25%;
+    width: 50%;
     height: 70px;
 
     border-bottom: 3px solid grey;
@@ -24,7 +24,7 @@
 }
 
 .naverwebtoon_header .nwheader__endwebtoon{
-    width: 25%;
+    width: 50%;
     height: 70px;
     border-bottom: 3px solid blue;
 
