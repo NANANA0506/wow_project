@@ -601,10 +601,35 @@
 }
 
 @media (max-width: 768px) {
+  .homebox {
+    width: 100%;
+    height: 1700px;
+  }
   .homebox__col1 {
+    width: 100%;
+    height: 0px;
+  }
+
+  .homebox__col2 {
+    width: 100%;
+    height: 300px;
+  }
+
+  .homebox__col3 {
     width: 100%;
     height: 500px;
   }
+
+  .homebox__col4 {
+    width: 100%;
+    height: 400px;
+  }
+
+  .homebox__col5 {
+    width: 100%;
+    height: 500px;
+  }
+
 
   .homebox__col1__sec__b__a2__c1__text p {
     font-size: 10px;

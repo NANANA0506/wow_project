@@ -688,7 +688,7 @@
 }
 
 .baseheader__col4 button {
-  width: 200px;
+  width: 175px;
   height: 40px;
 
   border: none;
@@ -716,6 +716,14 @@
 
   .baseheader__col3__logout1,
   .baseheader__col3__logout2{
+    opacity: 0;
+  }
+
+  .baseheader__col4 button {
+    opacity: 0;
+  }
+
+  .baseheader__col4 button:hover {
     opacity: 0;
   }
 }
