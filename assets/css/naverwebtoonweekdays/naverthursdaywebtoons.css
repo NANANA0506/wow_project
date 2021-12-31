@@ -51,27 +51,7 @@
     align-items: center;
     justify-content: center;
 }
-.naverwebtoon_header .nwheader__webtoons .nwheader__webtoons__font{
-    width: 100%;
-    cursor: pointer;
-}
-.naverwebtoon_header .nwheader__writers{
-    width: 25%;
-    height: 70px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    border-bottom: 3px solid grey;
-
-
-}
-.naverwebtoon_header .nwheader__writers .nwheader__writers__font{
-    width: 100%;
-    cursor: pointer;
-}
 
 
 
@@ -223,7 +203,7 @@
     flex-direction: row;
 }
 
-.naverwebtoons_rowbox1 .naverwebtoons_picture_box17 {
+.naverwebtoons_rowbox1 .naverwebtoons_picture_box28 {
     width: 20%;
     height: 250px;
 
@@ -233,58 +213,58 @@
     margin-left: 2.5%;
 }
 
-.picture_box_font13 {
+.picture_box_font25 {
     margin-top: 270px;
     margin-left: 95px;
 
     font-weight: 600;
 }
 
-.naverwebtoons_rowbox1 .naverwebtoons_picture_box18 {
+.naverwebtoons_rowbox1 .naverwebtoons_picture_box29 {
     width: 20%;
     height: 250px;
 
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/747269/thumbnail/thumbnail_IMAG10_55801c29-223f-46a0-a446-2e55d3024e71.jpg");
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/570503/thumbnail/thumbnail_IMAG10_023d23be-91f9-46c5-a1ff-152d6238e892.jpg");
     background-repeat: no-repeat;
     background-size: 90%;
 
     margin-left: 5%;
 }
 
-.picture_box_font14 {
+.picture_box_font26 {
     margin-top: 270px;
-    margin-left: 95px;
+    margin-left: 125px;
 
     font-weight: 600;
 }
 
-.naverwebtoons_rowbox1 .naverwebtoons_picture_box29{
+.naverwebtoons_rowbox1 .naverwebtoons_picture_box30 {
     width: 20%;
     height: 250px;
 
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/774862/thumbnail/thumbnail_IMAG10_a192356d-8ef5-4e95-94eb-4f71b4ad09e9.jpg");
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/736989/thumbnail/thumbnail_IMAG10_c26fbd42-af5b-4811-82e1-e6290713f2cf.jpg");
     background-size: 90%;
     background-repeat: no-repeat;
     margin-left: 5%;
 }
 
-.picture_box_font15 {
+.picture_box_font27 {
     margin-top: 270px;
-    margin-left: 115px;
+    margin-left: 125px;
 
     font-weight: 600;
 }
 
-.naverwebtoons_rowbox1 .naverwebtoons_picture_box20{
+.naverwebtoons_rowbox1 .naverwebtoons_picture_box31 {
     width: 20%;
     height: 250px;
     background-repeat: no-repeat;
     background-size: 90%;
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/769209/thumbnail/thumbnail_IMAG10_13ff2e28-686a-42de-890e-9289550978bc.jpg");
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/747271/thumbnail/thumbnail_IMAG10_0a56d153-5521-4ca8-9665-a4450c6fb40d.jpg");
     margin-left: 5%;
 }
 
-.picture_box_font16 {
+.picture_box_font28 {
     margin-top: 270px;
     margin-left: 115px;
 
@@ -302,66 +282,66 @@
     flex-direction: row;
 }
 
-.naverwebtoons_rowbox2_picture_box21{
+.naverwebtoons_rowbox2_picture_box32 {
     width: 20%;
     height: 250px;
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/784255/thumbnail/thumbnail_IMAG10_116d995b-8080-4379-b0ea-2956868f7c7f.jpg");
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/557672/thumbnail/thumbnail_IMAG10_d05c81ab-ea19-473b-818f-3aceb657ae1e.jpg");
     background-size: 90%;
     background-repeat: no-repeat;
     margin-left: 2.5%;
 }
 
-.picture_box_font17 {
-    margin-top: 270px;
-    margin-left: 100px;
-
-    font-weight: 600;
-}
-
-.naverwebtoons_rowbox2_picture_box22{
-    width: 20%;
-    height: 250px;
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/783056/thumbnail/thumbnail_IMAG10_7ac6c5fe-1072-4543-b966-4f6456037eda.jpg");
-    background-size: 90%;
-    background-repeat: no-repeat;
-    margin-left: 5%;
-}
-
-.picture_box_font18 {
-    margin-top: 270px;
-    margin-left: 95px;
-
-    font-weight: 600;
-}
-
-.naverwebtoons_rowbox2_picture_box23{
-    width: 20%;
-    height: 250px;
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/736744/thumbnail/thumbnail_IMAG10_52c79b5c-7d5e-48ff-a377-ee247b3134bd.jpg");
-    background-size: 90%;
-    background-repeat: no-repeat;
-    margin-left: 5%;
-}
-
-.picture_box_font19 {
+.picture_box_font29 {
     margin-top: 270px;
     margin-left: 120px;
 
     font-weight: 600;
 }
 
-.naverwebtoons_rowbox2_picture_box24{
+.naverwebtoons_rowbox2_picture_box33 {
     width: 20%;
     height: 250px;
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/738694/thumbnail/thumbnail_IMAG10_728d40b3-1224-4e00-b7a8-d16d9adbe137.jpg");
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/783055/thumbnail/thumbnail_IMAG10_f7dd1b57-3ac6-4bd7-86d6-a7d2fa26b8f6.jpg");
     background-size: 90%;
     background-repeat: no-repeat;
     margin-left: 5%;
 }
 
-.picture_box_font20 {
+.picture_box_font30{
     margin-top: 270px;
-    margin-left: 80px;
+    margin-left: 95px;
+
+    font-weight: 600;
+}
+
+.naverwebtoons_rowbox2_picture_box34{
+    width: 20%;
+    height: 250px;
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/731130/thumbnail/thumbnail_IMAG10_0f5fa6cc-3d7c-4e20-a42d-60b32de309e5.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    margin-left: 5%;
+}
+
+.picture_box_font31 {
+    margin-top: 270px;
+    margin-left: 120px;
+
+    font-weight: 600;
+}
+
+.naverwebtoons_rowbox2_picture_box35{
+    width: 20%;
+    height: 250px;
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/783888/thumbnail/thumbnail_IMAG10_f15c2d69-b43c-413c-afc7-039b3c172c66.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    margin-left: 5%;
+}
+
+.picture_box_font32 {
+    margin-top: 270px;
+    margin-left: 115px;
 
     font-weight: 600;
 }
@@ -376,70 +356,70 @@
     flex-direction: row;
 }
 
-.naverwebtoons_rowbox3_picture_box25 {
+.naverwebtoons_rowbox3_picture_box36 {
     width: 20%;
     height: 250px;
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/758662/thumbnail/thumbnail_IMAG10_576bcc2c-ea9e-4f37-8fe2-dc1faed26f10.jpg");
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/762279/thumbnail/thumbnail_IMAG10_7eca3c20-7c36-49b7-a7af-af933e9c8c09.jpg");
     background-size: 90%;
     background-repeat: no-repeat;
 
     margin-left: 2.5%;
 }
 
-.picture_box_font21{
+.picture_box_font33 {
+    margin-top: 260px;
+    margin-left: 125px;
+
+    font-weight: 600;
+}
+
+.naverwebtoons_rowbox3_picture_box37 {
+    width: 20%;
+    height: 250px;
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/776255/thumbnail/thumbnail_IMAG10_56b3ed9f-2773-46d3-b65f-07e5b070f66a.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+
+    margin-left: 5%;
+}
+
+.picture_box_font34 {
     margin-top: 260px;
     margin-left: 120px;
 
     font-weight: 600;
 }
 
-.naverwebtoons_rowbox3_picture_box26{
+.naverwebtoons_rowbox3_picture_box38{
     width: 20%;
     height: 250px;
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/749639/thumbnail/thumbnail_IMAG10_51043632-6c82-4e51-ab7a-5945724f0df8.jpg");
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/746857/thumbnail/thumbnail_IMAG10_0e5a96ba-ee85-4de9-9996-b59852281617.jpg");
     background-size: 90%;
     background-repeat: no-repeat;
-
     margin-left: 5%;
+
 }
 
-.picture_box_font22 {
+.picture_box_font35 {
     margin-top: 260px;
-    margin-left: 55px;
+    margin-left: 95px;
 
     font-weight: 600;
 }
 
-.naverwebtoons_rowbox3_picture_box27{
+.naverwebtoons_rowbox3_picture_box39{
     width: 20%;
     height: 250px;
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/717481/thumbnail/thumbnail_IMAG10_abd208ef-46dd-42ef-942e-df70b9e27386.jpg");
-    background-size: 90%;
-    background-repeat: no-repeat;
-    margin-left: 5%;
-
-}
-
-.picture_box_font23 {
-    margin-top: 260px;
-    margin-left: 115px;
-
-    font-weight: 600;
-}
-
-.naverwebtoons_rowbox3_picture_box28{
-    width: 20%;
-    height: 250px;
-    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/728126/thumbnail/thumbnail_IMAG10_7629c6e3-cf87-42d0-b2b4-e568f1dca526.jpg");
+    background-image: url("https://shared-comic.pstatic.net/thumb/webtoon/773417/thumbnail/thumbnail_IMAG10_4ce06217-a6a3-4a9e-8988-8a1347651f1e.jpg");
     background-repeat: no-repeat;
     background-size: 90%;
 
     margin-left: 5%;
 }
 
-.picture_box_font24 {
+.picture_box_font36 {
     margin-top: 260px;
-    margin-left: 120px;
+    margin-left: 125px;
 
     font-weight: 600;
 }
