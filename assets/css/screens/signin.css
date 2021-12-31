@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
 
-  background-color: bisque;
+  background: linear-gradient(310deg,bisque, 83%, #ec9c9c);
 }
 
 .siginbody__box {
@@ -19,6 +19,8 @@
   flex-direction: row;
 
   box-shadow: 3px 3px 25px rgb(109, 109, 109);
+
+  border-radius: 5px;
 }
 
 .siginbody__box__col1 {

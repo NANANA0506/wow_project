@@ -1,5 +1,5 @@
 header {
-  background: url("https://i.pinimg.com/474x/2d/0c/c4/2d0cc4d1ebbedea829a4740f8a269083.jpg");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/474x/e0/87/c6/e087c61ad0682c9fa4c8a9d1ba7d6834.jpg");
   text-align: center;
   width: 100%;
   height: 700px;
@@ -16,7 +16,6 @@ header .mainheader {
   padding: 50px;
   color: #fff;
   text-shadow: 1px 1px 1px #333;
-  background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
 }
 
 .mainheader h1 {
@@ -45,5 +44,7 @@ header .mainheader {
   box-shadow: 0 3px 20px 0 #0000003b;
 }
 button:hover {
+  background-color: #333;
+  color: #fff;
   cursor: pointer;
 }

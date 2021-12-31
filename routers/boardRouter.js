@@ -48,7 +48,7 @@ router.get("/questiondetail", checkLogin, (req, res, next) => {
         db.query(detailQuery, (err, rows) => {
 
             res.render("screens/board/questiondetail", { loggedIn, bData: rows[0] });
-        });
+        }); 
     } catch (error) {
         console.error(error);
         return res.status(400).send("작성하는데 실패하셨습니다.");
@@ -81,7 +81,7 @@ router.post("/questioncreate", (req, res, next) => {
     try {
         db.query(createQuery, (error, questions) => {
             if(error){
-                console.error(err);
+                console.error(error);
                 return res.redirect("/board/questionlist");
             }
         res.redirect("/board/questionlist");
@@ -92,29 +92,36 @@ router.post("/questioncreate", (req, res, next) => {
     };
 }); 
 
-router.get("questionupdate", (req, res, next) => {
-    res.render("screens/board/questionupdate");
+router.get("/questionupdate", (req, res, next) => {
+    const {bDataId} = req.params;
+    res.render("/screens/board/questionupdate");
 });
 
-router.post("/questionupdate/:updateId", (req, res, next) => {
-    
+router.post("/questionupdate", (req, res, next) => {
+    const {bDataId} = req.body;
+    const {bDatatitle, bDatacontent} = req.body;
+    console.log(bDataId);
+    console.log(bDatatitle);
+    console.log(bDatacontent);
     try {
-        updateQuery = `
-        UPDATE boards
-           SET title = ${req.body.title},
-               content = ${req.body.content}
-         WHERE id = ${boardId}
+        const updateQuery = `
+            UPDATE boards
+               SET title = "${bDatatitle}",
+                   content = "${bDatacontent}",
+                   updatedAt = now()
+             WHERE id =  ${bDataId}
     `;
-    db.query(updateQuery, (error, result) => {
+    db.query(updateQuery, (error, bData) => {
         if(error){
+            console.error(error);
             return res.status(400).send("게시글을 수정중 에러 발생 !");
         }
     });
-    res.redirect("screens/board/question");
     } catch (error) {
-      console.error(error)
+      console.error(error);
       res.status(400).send("게시글을 수정할 수 없습니다.")
     }
+    res.redirect("/board/qustionlist")
 });
 
 router.post("/questiondelete", (req, res, next) => {

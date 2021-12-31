@@ -93,12 +93,22 @@ router.post("/signup", (req, res, next) => {
             console.error(error);
             return res.status(400).send("회원가입 실패");
           } else {
-            res.status(201).send("회원가입 성공");
-          }
+            res.redirect("/");
+          };
         });
-      }
-    }
+      };
+    };
   });
+});
+
+router.get("/user", checkLogin, (req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/user", {loggedIn});
+});
+
+router.get("/profile", checkLogin, (req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/profile", {loggedIn});
 });
 
 router.get("/logout", (req, res, next) => {
@@ -107,28 +117,32 @@ router.get("/logout", (req, res, next) => {
   return res.redirect("/");
 });
 
-router.get("/help", (req, res, next) => {
-  res.render("screens/help");
+router.get("/help", checkLogin, (req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/help", {loggedIn});
 });
 
 router.get("/partcipants", (req, res, next) => {
   res.render("screens/partcipants");
 });
 
-router.get("/notice", (req, res, next) => {
-  res.render("screens/notice");
-});
-
-router.get("/event", (req, res, next) => {
-  res.render("screens/event");
-});
-
 router.get("/termsofuse", (req, res, next) => {
   res.render("screens/termsofuse");
 });
 
+<<<<<<< HEAD
 router.get("/kakaoWeb", (req, res, next) => {
   res.render("screens/kakaoWeb");
+=======
+router.get("/development", checkLogin,(req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/development", {loggedIn});
+});
+
+router.get("/suggestion", checkLogin,(req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/suggestion", {loggedIn});
+>>>>>>> refs/remotes/origin/master
 });
 
 module.exports = router;

@@ -12,7 +12,7 @@ router.get("/list", (req, res, next) => {
                 createdAt,
                 anonymousName
           FROM  frees
-         ORDER  BY  id      ASC
+         ORDER  BY  id     DESC
     `;
 
     try {

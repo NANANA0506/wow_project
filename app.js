@@ -6,9 +6,11 @@ const globalRouter = require("./routers/globalRouter");
 const boardRouter = require("./routers/boardRouter");
 const webtoonRouter = require("./routers/webtoonRouter");
 const naverwebtoonRouter = require("./routers/naverwebtoonRouter");
+const fqaRouter = require("./routers/fqaRouter");
 const eventRouter = require("./routers/eventRouter");
 const freeRouter = require("./routers/freeRouter");
 const noticeRouter = require("./routers/noticeRouter");
+const qnaRouter = require("./routers/qnaRouter");
 const path = require("path");
 const session = require("express-session");
 
@@ -32,7 +34,10 @@ app.use("/", globalRouter);
 app.use("/board", boardRouter);
 app.use("/webtoon", webtoonRouter);
 app.use("/event", eventRouter);
-app.use("/free", freeRouter)
+app.use("/free", freeRouter);
+app.use("/notice", noticeRouter);
+app.use("/fqa", fqaRouter);
+app.use("/qna", qnaRouter);
 
 app.listen(PORT, () => {
   console.log(`🐾🐶http://localhost:${PORT} WOW✨ SERVER START🐰🥕`);
