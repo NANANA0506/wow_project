@@ -130,4 +130,14 @@ router.get("/termsofuse", (req, res, next) => {
   res.render("screens/termsofuse");
 });
 
+router.get("/development", checkLogin,(req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/development", {loggedIn});
+});
+
+router.get("/suggestion", checkLogin,(req, res, next) => {
+  const loggedIn = req.session.isLoggedIn;
+  res.render("screens/suggestion", {loggedIn});
+});
+
 module.exports = router;

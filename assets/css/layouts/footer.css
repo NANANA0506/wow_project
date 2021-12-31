@@ -227,3 +227,47 @@ html {
   font-size: 16px;
   color: #999;
 }
+
+@media (max-width: 768px) {
+  .footer__col1__sec1 {
+    width: 100%;
+    height: 100px;
+  }
+
+  .footer__col1__sec2__text1,
+  .footer__col1__sec2__text2 ,
+  .footer__col1__sec2__text3 ,
+  .footer__col1__sec2__text4  {
+    font-size: 10px;
+  }
+
+  .footer__col2__sec1__text {
+    font-size: 10px;
+  }
+
+  .footer__col2__sec2__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer__col2__sec2__icon:hover {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer__col2__sec2__icon i{
+    font-size: 17px;
+  }
+
+  .footer__col2__sec2__icon i:hover{
+    font-size: 17px;
+  }
+
+  .footer__col2__sec3__text1  p{
+    font-size: 12px;
+  }
+
+  .footer__col2__sec3__text2 p {
+    font-size: 12px;
+  }
+}
