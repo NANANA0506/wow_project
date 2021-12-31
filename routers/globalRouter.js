@@ -130,6 +130,10 @@ router.get("/termsofuse", (req, res, next) => {
   res.render("screens/termsofuse");
 });
 
+<<<<<<< HEAD
+router.get("/kakaoWeb", (req, res, next) => {
+  res.render("screens/kakaoWeb");
+=======
 router.get("/development", checkLogin,(req, res, next) => {
   const loggedIn = req.session.isLoggedIn;
   res.render("screens/development", {loggedIn});
@@ -138,6 +142,7 @@ router.get("/development", checkLogin,(req, res, next) => {
 router.get("/suggestion", checkLogin,(req, res, next) => {
   const loggedIn = req.session.isLoggedIn;
   res.render("screens/suggestion", {loggedIn});
+>>>>>>> refs/remotes/origin/master
 });
 
 module.exports = router;
