@@ -1,6 +1,7 @@
 const express = require("express");
 const db = require("../db");
 const checkLogin = require("../middlewares/checkLogin");
+
 const router = express.Router();
 
 router.get("/qnalist", checkLogin, (req, res, next) => {
@@ -45,7 +46,7 @@ router.get("/qnadetail", checkLogin, (req, res, next) => {
 
     try {
         db.query(detailQuery, (err, rows) => {
-            res.render("sceens/qna/qnadetail", { loggedIn, qna: rows[0] });
+            res.render("screens/qna/qnadetail", { loggedIn, qna: rows[0] });
         });
     } catch(error) {
         console.error(error);
@@ -54,7 +55,8 @@ router.get("/qnadetail", checkLogin, (req, res, next) => {
 });
 
 router.get("/qnacreate", checkLogin, (req, res, next) => {
-    res.render("sceens/qna/qnacreate", {loggedIn});
+    const loggedIn = req.session.isLoggedIn;
+    res.render("screens/qna/qnacreate", {loggedIn});
 });
 
 router.post("/qnacreate", (req, res, next) => {
@@ -116,14 +118,14 @@ router.get("/qnaupdate", (req, res, next) => {
 
 router.post("/qnadelete", (req, res, next) => {
 
-    const {qnaId} = req.body;
+    const {bDataId} = req.body;
 
     try {
         const deleteQuery =`
             DELETE  FROM    qna
-             WHERE  id = ${qnaId}
+             WHERE  id = ${bDataId}
         `;
-        db.query(deleteQuery, (error, qna) => {
+        db.query(deleteQuery, (error, bData) => {
             if(error){
                 console.error(error);
                 return res.status(400).send("삭제중 애러 발생!");

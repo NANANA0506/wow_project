@@ -93,20 +93,21 @@ router.post("/eventcreate", (req, res, next) => {
   }
 });
 
-router.post("/delete", (req, res, next) => {
-  const { eventId } = req.body;
+router.post("/eventdelete", (req, res, next) => {
+
+  const { bDataId } = req.body;
 
   try {
     const deleteQuery = `
             DELETE FROM events
-             WHERE  id = ${eventId}
+             WHERE  id = ${bDataId}
         `;
-    db.query(deleteQuery, (error, result) => {
+    db.query(deleteQuery, (error, bData) => {
       if (error) {
         console.error(error);
         return res.status(400).send("삭제 중 애러 발생!");
       }
-      res.redirect("event/eventlist");
+      res.redirect("/event/eventlist");
     });
   } catch (error) {
     console.error(error);
